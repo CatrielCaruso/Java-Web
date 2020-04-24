@@ -26,43 +26,43 @@
 				<form class="form-sign" action="GestionPersona" method="POST">
 				
 				    <div class="form-group">
-						<label>Id</label> <input type="text" value="${persona.getIdPersona()} " name="idpersona" readonly="readonly"
+						<label>Id</label> <input type="text" value="${persona.getIdPersona()}" name="idpersona" readonly="readonly"
 							class="form-control">
 					</div>
 					
 					<div class="form-group">
-						<label>Dni</label> <input type="text" value="${persona.getDni()} " name="dni"
+						<label>Dni</label> <input type="text" value="${persona.getDni()}" name="dni"
 							class="form-control">
 					</div>
 
 					<div class="form-group">
-						<label>Apellido</label> <input type="text" value="${persona.getApellido()} " name="apellido"
+						<label>Apellido</label> <input type="text" value="${persona.getApellido()}" name="apellido"
 							class="form-control">
 					</div>
 
 					<div class="form-group">
-						<label>Nombre</label> <input type="text" value="${persona.getNombre()} " name="nombre"
+						<label>Nombre</label> <input type="text" value="${persona.getNombre()}" name="nombre"
 							class="form-control">
 					</div>
 
 					<div class="form-group">
-						<label>Telefono</label> <input type="text" value="${persona.getTelefono()} " name="telefono"
+						<label>Telefono</label> <input type="text" value="${persona.getTelefono()}" name="telefono"
 							class="form-control">
 					</div>
 
 					<div class="form-group">
-						<label>Email</label> <input type="text" value="${persona.getEmail()} " name="email"
+						<label>Email</label> <input type="text" value="${persona.getEmail()}" name="email"
 							class="form-control">
 					</div>
 
 
 					<div class="form-group">
-						<label>Usuario</label> <input type="text" value="${persona.getUsuario()} " name="usuario"
+						<label>Usuario</label> <input type="text" value="${persona.getUsuario()}" name="usuario"
 							class="form-control">
 					</div>
 
 					<div>
-						<label>Contraseña</label> <input type="text" value="${persona.getContrasena()} " name="contrasena"
+						<label>Contraseña</label> <input type="text" value="${persona.getContrasena()}" name="contrasena"
 							class="form-control">
 					</div>
          
@@ -70,9 +70,11 @@
 					<input type="submit" name="accion" value="agregar"
 						class="btn btn-success btn-lg">
 				    <input type="submit" name="listar" value="listar"
-						class="btn btn-info btn-lg">		
-					 <input type="submit" name="actualizar" value="actualizar"
-						class="btn btn-primary btn-lg">	
+						class="btn btn-info btn-lg">
+					  <input type="submit" name="actualizar" value="actualizar"
+						class="btn btn-primary btn-lg">				
+					 
+						
                     
 				</form>
 
@@ -113,12 +115,13 @@
 				        <td>${p.getUsuario()}</td>
 				        <td>${p.getContrasena()}</td>
 				        
-						<form method="post" action="GestionPersona">
-						<td>
-						  <button class="btn btn-warning btn-lg" value="${p.getIdPersona()}" name="modificar">Editar</button>
-						  <button class="btn btn-danger btn-lg"  value="${p.getIdPersona()}" name="borrar">Delete</button>
-						  </form>
-						</td>
+						
+						   <td>
+						    <form method="post" action="GestionPersona">
+						     <button class="btn btn-warning btn-lg" value="${p.getIdPersona()}" name="modificar">Editar</button>
+						     <button class="btn btn-danger btn-lg"  value="${p.getIdPersona()}" name="borrar">Delete</button>
+						    </form>
+						  </td>
 					</tr>
               </c:forEach>
 

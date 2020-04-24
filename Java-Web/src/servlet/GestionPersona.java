@@ -110,8 +110,9 @@ public class GestionPersona extends HttpServlet {
 
 			entity.Persona p = new entity.Persona();
 			CtrlABMPersona ctp = new CtrlABMPersona();
-
+            
 			p.setIdPersona(Integer.parseInt(request.getParameter("idpersona")));
+			
 			p.setNombre(request.getParameter("nombre"));
 			p.setApellido(request.getParameter("apellido"));
 			p.setDni(request.getParameter("dni"));

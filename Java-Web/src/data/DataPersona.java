@@ -198,12 +198,12 @@ public class DataPersona {
 	}
 	
 	public void actualizar(Persona p){
-		PreparedStatement stmt=null;
-		ResultSet keyResultSet=null;
+PreparedStatement stmt= null;
+		
 		try {
 			stmt=FactoryConexion.getInstancia().getConn()
 					.prepareStatement(
-					"UPDATE  persona SET Dni=?,Apellido=?, Nombre=?, Email=?, Telefono=?   ,Usuario=?, Contrasena=?, Email=?, Telefono=? where IdPersona=? ",
+					"UPDATE  persona SET Dni=?,Apellido=?,Nombre=?,Email=?,Telefono=?,Usuario=?,Contrasena=? where IdPersona=? ",
 					PreparedStatement.RETURN_GENERATED_KEYS
 					);
 			
@@ -216,22 +216,18 @@ public class DataPersona {
 			stmt.setString(7, p.getContrasena());
 			
  		    stmt.setInt(8, p.getIdPersona());
-			stmt.executeUpdate();
-			keyResultSet=stmt.getGeneratedKeys();
-			if(keyResultSet!=null && keyResultSet.next()){
-				p.setIdPersona(keyResultSet.getInt(1));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+ 		    stmt.executeUpdate();
+		}  catch (SQLException e) {
+            e.printStackTrace();
+		} finally {
+            try {
+                if(stmt!=null)stmt.close();
+                FactoryConexion.getInstancia().releaseConn();
+            } catch (SQLException e) {
+            	e.printStackTrace();
+            }
 		}
-		try {
-			if(keyResultSet!=null)keyResultSet.close();
-			if(stmt!=null)stmt.close();
-			FactoryConexion.getInstancia().releaseConn();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
+    }
 	
 	
 	
