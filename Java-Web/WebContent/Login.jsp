@@ -26,16 +26,16 @@
 
 
 					<div class="form-group">
-						<label>Usuario:</label> <input type="text" name="txtuser"
+						<label>Usuario:</label> <input type="text" name="user"
 							class="form-control">
 					</div>
 
 
 					<div class="form-group">
-						<label>Password:</label> <input type="password" name="txtpass"
+						<label>Password:</label> <input type="password" name="pass"
 							class="form-control">
 					</div>
-					<input type="submit" name="accion" value="Ingresar"
+					<input type="submit" name="logear" value="Ingresar"
 						class="btn btn-primary btn-block">
 				</form>
 

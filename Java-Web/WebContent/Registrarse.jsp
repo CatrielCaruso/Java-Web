@@ -12,17 +12,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container mt-5 col-lg-6">
+	<div class="container mt-2 col-lg-6">
 
 		<div class="card col-sm-10">
 
 			<div class="card-body ">
 
-				<form class="form-sign" action="Persona" method="POST">
+				<form class="form-horizontal"  action="Persona" method="POST">
 
 					<div class="form-group text-center">
 						<h3>Nuevo usuario</h3>
 					</div>
+					
+					<div class="form-group">
+						<label>Apellido:</label> <input type="text" name="apellido"
+							class="form-control">
+					</div>
+					
 
 
 					<div class="form-group">
@@ -42,7 +48,7 @@
 					</div>
 
 					<div class="form-group">
-						<label>Estado:</label> <input type="text" name="estado"
+						<label>Email:</label> <input type="text" name="email"
 							class="form-control">
 					</div>
 
@@ -55,7 +61,7 @@
 						<label>Contraseña:</label> <input type="password"
 							name="contrasena" class="form-control">
 					</div>
-					<input type="submit" name="accion" value="crear"
+					<input type="submit" name="accion" value="agregar"
 						class="btn btn-primary btn-block">
 				</form>
 

@@ -1,11 +1,19 @@
 package servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import entity.Persona;
+import controlers.CtrlABMPersona;
+
+
+
+
 
 /**
  * Servlet implementation class Login
@@ -35,7 +43,62 @@ public class Login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		//doGet(request, response);
+		
+		
+		switch (request.getParameter("logear")) {
+		case "ingresar":
+			this.ingresar(request,response);
+			break;
+		case "registrar":
+			request.getRequestDispatcher("CrearPersona.jsp").forward(request, response);
+			break;
+		default:
+			System.out.println("Error: opcion no disponible");
+			break;
+		}
+		
+		
+		
+		}
+	
+	private void ingresar(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+		
+			String user=request.getParameter("user");
+			String pass=request.getParameter("pass");
+			
+			CtrlABMPersona ctrl= new CtrlABMPersona();
+			Persona per=ctrl.loguearUsuario(user, pass);
+			
+			
+				if(per != null){
+					
+					
 
-}
+
+				
+						request.getRequestDispatcher("Principal.jsp").forward(request, response);
+						}else {
+						request.getRequestDispatcher("CrearPersona.jsp").forward(request, response);	
+						}
+				
+				
+				
+			
+			
+			//System.out.println();
+			//request.getRequestDispatcher("PaginaError.jsp").forward(request, response);
+
+			
+			//request.getRequestDispatcher("menuPrincipal.jsp").forward(request, response);
+			//response.getWriter().append(user).append(" ").append(pass);
+			
+			
+		//} catch (Exception e) {
+			//e.printStackTrace();
+
+			
+		//}
+		}
+		
+	}
