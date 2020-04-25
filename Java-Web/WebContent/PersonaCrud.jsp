@@ -65,7 +65,11 @@
 						<label>Contraseña</label> <input type="text" value="${persona.getContrasena()}" name="contrasena"
 							class="form-control">
 					</div>
-         
+                     
+                     <div>
+						<label>Rol</label> <input type="text" value="${persona.getRol()}" name="rol"
+							class="form-control">
+					</div>
 					
 					<input type="submit" name="accion" value="agregar"
 						class="btn btn-success btn-lg">
@@ -98,6 +102,7 @@
 						<th>Telefono</th>
 						<th>Usuario</th>
 						<th>Contraseña</th>
+						<th>Rol</th>
 						<th>Acciones</th>
 					</tr>
 				</thead>
@@ -114,6 +119,7 @@
 						<td>${p.getTelefono()}</td>
 				        <td>${p.getUsuario()}</td>
 				        <td>${p.getContrasena()}</td>
+				        <td>${p.getRol()}</td>
 				        
 						
 						   <td>

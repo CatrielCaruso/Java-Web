@@ -1,15 +1,21 @@
 @charset "ISO-8859-1";
 /* Hey! I did not designed it, just coded (: */
 body{
-	background-image: url("https://evaferreira.com.ar/acamica/animacion/fondo.jpg");
+	
+	
+	
+	background-color: #8cb2d8;
 	background-size: cover;
 	background-repeat: no-repeat;
+	
 }
 form{
+	
+	
 	padding-top: 50px;
 	max-width: 400px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 150px;
 	width: 40%;
 	
 	background-image: linear-gradient(#CCC 40px, #CCC 40px, #FFF 40px);

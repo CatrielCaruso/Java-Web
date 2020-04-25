@@ -62,7 +62,7 @@ public class GestionPersona extends HttpServlet {
 			p.setTelefono(request.getParameter("telefono"));
 			p.setUsuario(request.getParameter("usuario"));
 			p.setContrasena(request.getParameter("contrasena"));
-
+			p.setRol(request.getParameter("rol"));
 			ctp.add(p);
 
 			this.doGet(request, response);
@@ -120,7 +120,7 @@ public class GestionPersona extends HttpServlet {
 			p.setContrasena(request.getParameter("contrasena"));
 			p.setEmail(request.getParameter("email"));
 			p.setTelefono(request.getParameter("telefono"));
-             
+			p.setRol(request.getParameter("rol"));
 			
 			
 			

@@ -58,7 +58,7 @@ public class Persona extends HttpServlet {
 			p.setTelefono(request.getParameter("telefono"));
 			p.setUsuario(request.getParameter("usuario"));
 			p.setContrasena(request.getParameter("contrasena"));
-
+			p.setRol(request.getParameter("rol"));
 			ctp.add(p);
 
 			//this.doGet(request, response);

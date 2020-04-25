@@ -61,8 +61,16 @@
 						<label>Contraseña:</label> <input type="password"
 							name="contrasena" class="form-control">
 					</div>
+					
+					<div class="form-group">
+					
+					<input type="hidden" name="rol" value="cliente" readonly="readonly">
+					</div>
 					<input type="submit" name="accion" value="agregar"
 						class="btn btn-primary btn-block">
+				
+				      
+				
 				</form>
 
 

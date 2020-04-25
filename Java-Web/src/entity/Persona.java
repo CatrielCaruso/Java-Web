@@ -9,11 +9,13 @@ public class Persona {
 	private String Telefono;
 	private String Usuario;
 	private String Contrasena;
+	private String Rol;
+	
 	public Persona() {
-		
+		super();
 	}
 	public Persona(int idPersona, String dni, String apellido, String nombre, String email, String telefono,
-			String usuario, String contrasena) {
+			String usuario, String contrasena, String rol) {
 		super();
 		IdPersona = idPersona;
 		Dni = dni;
@@ -23,6 +25,7 @@ public class Persona {
 		Telefono = telefono;
 		Usuario = usuario;
 		Contrasena = contrasena;
+		Rol = rol;
 	}
 	public int getIdPersona() {
 		return IdPersona;
@@ -72,7 +75,12 @@ public class Persona {
 	public void setContrasena(String contrasena) {
 		Contrasena = contrasena;
 	}
-
+	public String getRol() {
+		return Rol;
+	}
+	public void setRol(String rol) {
+		Rol = rol;
+	}
 	
-
+	
 }

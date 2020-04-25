@@ -59,11 +59,18 @@ public class Login extends HttpServlet {
 				if(per != null){
 					
 					
+					request.getSession().setAttribute("personaLogueada", per);
 
-
-				
+					if (per.getRol().equals("Administrador")) {
+				    
+						
+						request.getRequestDispatcher("PersonaCrud.jsp").forward(request, response);
+					}else {
+						
 						request.getRequestDispatcher("Principal.jsp").forward(request, response);
 						
+						
+					}
 				
 				}else {
 						

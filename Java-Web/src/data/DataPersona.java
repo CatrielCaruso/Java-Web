@@ -14,7 +14,7 @@ public class DataPersona {
 		ResultSet keyResultSet = null;
 		try {
 			stmt = FactoryConexion.getInstancia().getConn().prepareStatement(
-					"insert into persona(Dni,Apellido, Nombre, Email, Telefono, Usuario,Contrasena) values (?,?,?,?,?,?,?)",
+					"insert into persona(Dni,Apellido, Nombre, Email, Telefono, Usuario,Contrasena,Rol) values (?,?,?,?,?,?,?,?)",
 					PreparedStatement.RETURN_GENERATED_KEYS);
 
 			stmt.setString(1, p.getDni());
@@ -24,6 +24,7 @@ public class DataPersona {
 			stmt.setString(5, p.getTelefono());
 			stmt.setString(6, p.getUsuario());
 			stmt.setString(7, p.getContrasena());
+			stmt.setString(8, p.getRol());
 
 			stmt.executeUpdate();
 			keyResultSet = stmt.getGeneratedKeys();
@@ -50,7 +51,7 @@ public class DataPersona {
 		ResultSet rs = null;
 		try {
 			stmt = FactoryConexion.getInstancia().getConn()
-					.prepareStatement("select p.IdPersona,p.Dni,p.Apellido,p.Nombre,p.Email,p.Telefono from persona p where p.Usuario=? and p.Contrasena=?");
+					.prepareStatement("select p.IdPersona,p.Dni,p.Apellido,p.Nombre,p.Email,p.Telefono,p.Rol from persona p where p.Usuario=? and p.Contrasena=?");
 			stmt.setString(1,user);
 			stmt.setString(2,pass);
 
@@ -65,6 +66,7 @@ public class DataPersona {
 				p.setNombre(rs.getString("Nombre"));
 			    p.setEmail(rs.getString("Email"));
 				p.setTelefono(rs.getString("Telefono"));
+				p.setRol(rs.getString("Rol"));
 				p.setUsuario(user);
 				p.setContrasena(pass);
 				
@@ -111,6 +113,7 @@ public class DataPersona {
 					p.setTelefono(rs.getString("Telefono"));
 					p.setContrasena(rs.getString("Contrasena"));
 					p.setUsuario(rs.getString("Usuario"));
+					p.setRol(rs.getString("Rol"));
 		 			pers.add(p);
 				}
 			}
@@ -153,7 +156,7 @@ public class DataPersona {
 				p.setTelefono(rs.getString("Telefono"));
 				p.setContrasena(rs.getString("Contrasena"));
 				p.setUsuario(rs.getString("Usuario"));
-	 		}
+	 		}   p.setRol(rs.getString("Rol"));
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -204,7 +207,7 @@ PreparedStatement stmt= null;
 		try {
 			stmt=FactoryConexion.getInstancia().getConn()
 					.prepareStatement(
-					"UPDATE  persona SET Dni=?,Apellido=?,Nombre=?,Email=?,Telefono=?,Usuario=?,Contrasena=? where IdPersona=? ",
+					"UPDATE  persona SET Dni=?,Apellido=?,Nombre=?,Email=?,Telefono=?,Usuario=?,Contrasena=?,Rol=? where IdPersona=? ",
 					PreparedStatement.RETURN_GENERATED_KEYS
 					);
 			
@@ -215,8 +218,8 @@ PreparedStatement stmt= null;
 			stmt.setString(5, p.getTelefono());
 			stmt.setString(6, p.getUsuario());
 			stmt.setString(7, p.getContrasena());
-			
- 		    stmt.setInt(8, p.getIdPersona());
+			stmt.setString(8, p.getRol());
+ 		    stmt.setInt(9, p.getIdPersona());
  		    stmt.executeUpdate();
 		}  catch (SQLException e) {
             e.printStackTrace();
