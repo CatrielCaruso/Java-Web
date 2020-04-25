@@ -45,30 +45,15 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-		
-		switch (request.getParameter("logear")) {
-		case "ingresar":
-			this.ingresar(request,response);
-			break;
-		case "registrar":
-			request.getRequestDispatcher("CrearPersona.jsp").forward(request, response);
-			break;
-		default:
-			System.out.println("Error: opcion no disponible");
-			break;
-		}
+		    
+		if (request.getParameter("loguear") != null) {
 		
 		
-		
-		}
-	
-	private void ingresar(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-		
-			String user=request.getParameter("user");
+		    String user=request.getParameter("user");
 			String pass=request.getParameter("pass");
 			
 			CtrlABMPersona ctrl= new CtrlABMPersona();
-			Persona per=ctrl.loguearUsuario(user, pass);
+			Persona per=ctrl.loguearUsuario(user,pass);
 			
 			
 				if(per != null){
@@ -78,13 +63,18 @@ public class Login extends HttpServlet {
 
 				
 						request.getRequestDispatcher("Principal.jsp").forward(request, response);
-						}else {
-						request.getRequestDispatcher("CrearPersona.jsp").forward(request, response);	
-						}
+						
+				
+				}else {
+						
+					       request.getRequestDispatcher("Login.jsp").forward(request, response);	
+						
+				
+				      }
 				
 				
 				
-			
+		}
 			
 			//System.out.println();
 			//request.getRequestDispatcher("PaginaError.jsp").forward(request, response);
@@ -99,6 +89,6 @@ public class Login extends HttpServlet {
 
 			
 		//}
-		}
 		
+	}
 	}

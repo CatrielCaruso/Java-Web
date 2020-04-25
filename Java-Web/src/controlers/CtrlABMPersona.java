@@ -19,8 +19,8 @@ public class CtrlABMPersona {
 		dataPer.add(p);
 	}
 
-	public Persona loguearUsuario(String user, String pass) {
-		return dataPer.validarUsuario(user, pass);
+	public Persona loguearUsuario(String user,String pass) {
+		return dataPer.validarUsuario(user,pass);
 	}
 
 	public ArrayList<Persona> getAll() {

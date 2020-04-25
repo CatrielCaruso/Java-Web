@@ -44,29 +44,30 @@ public class DataPersona {
 		}
 	}
 
-	public Persona validarUsuario(String user, String pass) {
+	public Persona validarUsuario(String user,String pass) {
 		Persona p = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		try {
 			stmt = FactoryConexion.getInstancia().getConn()
-					.prepareStatement("select * persona where Usuario=? and Contrasena = ? ");
-			stmt.setString(1, user);
-			stmt.setString(2, pass);
+					.prepareStatement("select p.IdPersona,p.Dni,p.Apellido,p.Nombre,p.Email,p.Telefono from persona p where p.Usuario=? and p.Contrasena=?");
+			stmt.setString(1,user);
+			stmt.setString(2,pass);
 
 			rs = stmt.executeQuery();
+			
 			if (rs != null && rs.next()) {
 				p = new Persona();
 
-				p.setIdPersona(rs.getInt("id_persona"));
-				p.setNombre(rs.getString("nombre"));
-				p.setApellido(rs.getString("apellido"));
-				p.setDni(rs.getString("dni"));
-
-				p.setEmail(rs.getString("email"));
-
+				p.setIdPersona(rs.getInt("IdPersona"));
+				p.setDni(rs.getString("Dni"));
+				p.setApellido(rs.getString("Apellido"));
+				p.setNombre(rs.getString("Nombre"));
+			    p.setEmail(rs.getString("Email"));
+				p.setTelefono(rs.getString("Telefono"));
 				p.setUsuario(user);
 				p.setContrasena(pass);
+				
 
 			}
 
