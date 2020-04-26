@@ -96,6 +96,12 @@ public class Login extends HttpServlet {
 
 			
 		//}
+		if (request.getParameter("salir") != null) {
+			
+			request.getRequestDispatcher("Login.jsp").forward(request, response);
+			
+			
+		}
 		
 	}
 	}

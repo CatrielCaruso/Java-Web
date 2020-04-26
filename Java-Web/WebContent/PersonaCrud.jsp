@@ -13,10 +13,12 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <title>Insert title here</title>
 </head>
 <body>
-
+   <div class="animated fadeIn">
 	<div class="d-flex">
 		<div class="card col-sm-4">
 
@@ -32,22 +34,22 @@
 					
 					<div class="form-group">
 						<label>Dni</label> <input type="text" value="${persona.getDni()}" name="dni"
-							class="form-control">
+							class="form-control" >
 					</div>
 
 					<div class="form-group">
 						<label>Apellido</label> <input type="text" value="${persona.getApellido()}" name="apellido"
-							class="form-control">
+							class="form-control" >
 					</div>
 
 					<div class="form-group">
 						<label>Nombre</label> <input type="text" value="${persona.getNombre()}" name="nombre"
-							class="form-control">
+							class="form-control" >
 					</div>
 
 					<div class="form-group">
 						<label>Telefono</label> <input type="text" value="${persona.getTelefono()}" name="telefono"
-							class="form-control">
+							class="form-control" >
 					</div>
 
 					<div class="form-group">
@@ -58,7 +60,7 @@
 
 					<div class="form-group">
 						<label>Usuario</label> <input type="text" value="${persona.getUsuario()}" name="usuario"
-							class="form-control">
+							class="form-control" >
 					</div>
 
 					<div>
@@ -150,5 +152,6 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 		crossorigin="anonymous"></script>
+</div>		
 </body>
 </html>

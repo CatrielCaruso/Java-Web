@@ -8,17 +8,18 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-
+ <link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container mt-2 col-lg-6">
+	<div class="container mt-2 col-lg-6 animated zoomIn">
 
 		<div class="card col-sm-10">
 
 			<div class="card-body ">
 
-				<form class="form-horizontal"  action="Persona" method="POST">
+				<form class="form-horizontal"  action="RegistrarPersona" method="POST">
 
 					<div class="form-group text-center">
 						<h3>Nuevo usuario</h3>
@@ -26,47 +27,47 @@
 					
 					<div class="form-group">
 						<label>Apellido:</label> <input type="text" name="apellido"
-							class="form-control">
+							class="form-control" required>
 					</div>
 					
 
 
 					<div class="form-group">
 						<label>Nombre:</label> <input type="text" name="nombre"
-							class="form-control">
+							class="form-control" required>
 					</div>
 
 
 					<div class="form-group">
 						<label>Dni:</label> <input type="text" name="dni"
-							class="form-control">
+							class="form-control" required>
 					</div>
 
 					<div class="form-group">
 						<label>Telefono:</label> <input type="text" name="telefono"
-							class="form-control">
+							class="form-control" required>
 					</div>
 
 					<div class="form-group">
 						<label>Email:</label> <input type="text" name="email"
-							class="form-control">
+							class="form-control" required>
 					</div>
 
 					<div class="form-group">
 						<label>Usuario:</label> <input type="text" name="usuario"
-							class="form-control">
+							class="form-control" required>
 					</div>
 
 					<div class="form-group">
 						<label>Contraseña:</label> <input type="password"
-							name="contrasena" class="form-control">
+							name="contrasena" class="form-control" required>
 					</div>
 					
 					<div class="form-group">
 					
 					<input type="hidden" name="rol" value="cliente" readonly="readonly">
 					</div>
-					<input type="submit" name="accion" value="agregar"
+					<input type="submit" name="accion" value="Agregar"
 						class="btn btn-primary btn-block">
 				
 				      
