@@ -127,6 +127,8 @@ public class GestionPersona extends HttpServlet {
 			ctp.update(p);
 			this.doGet(request, response);
 			
+		}else {
+			this.doGet(request, response);
 		}
 		
 		

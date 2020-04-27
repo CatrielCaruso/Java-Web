@@ -18,37 +18,57 @@
 
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="btn btn-outline-light" style="margin-left:10px; border:none" class="nav-link" href="#">Home
-						
-				</a></li>
-				<li class="nav-item"><a style="margin-left:10px; border:none" class="btn btn-outline-light" href="#">Mis reservas</a>
+				<li class="nav-item active">
+					<form action="DireccionNavbar" method="post">
+
+						<button name="home" value="salir" class="btn btn-outline-light"
+							style="margin-left: 10px; border: none" class="nav-link" href="#">Home</button>
+					</form>
 				</li>
-				<li class="nav-item"><a style="margin-left:10px; border:none" class="btn btn-outline-light" href="#">Contacto</a></li>
-				<li class="nav-item"><a style="margin-left:10px; border:none" class="btn btn-outline-light" href="#"
-					tabindex="-1" aria-disabled="true">Disabled</a></li>
+
+				<li class="nav-item">
+					<form action="DireccionNavbar" method="post">
+						<button name="reservas" value="salir"
+							style="margin-left: 10px; border: none"
+							class="btn btn-outline-light" href="#">Mis reservas</button>
+					</form>
+				</li>
+				<li class="nav-item">
+					<form action="DireccionNavbar" method="post">
+						<button name="contacto" value="salir"
+							style="margin-left: 10px; border: none"
+							class="btn btn-outline-light" href="#">Contacto</button>
+					</form>
+				</li>
+				<li class="nav-item"><a style="margin-left: 10px; border: none"
+					class="btn btn-outline-light" href="#" tabindex="-1"
+					aria-disabled="true"></a></li>
 			</ul>
-			
+
 		</div>
-		
+
 		<div class="dropdown">
-				<button style="border:none" class="btn btn-outline-light dropdown-toggle" type="button"
-					id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false">${personaLogueada.getNombre()} ${personaLogueada.getApellido()}</button>
-				<div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-					<a class="dropdown-item" href="#">
-					   <img src="file:///C:/Users/Catriel/git/Java-Web/Java-Web/WebContent/style/img/index.png" alt="100" width="100" />
-					</a> <a
-						class="dropdown-item" href="#">${personaLogueada.getUsuario()}</a> 
-						<a class="dropdown-item" href="#">${personaLogueada.getEmail()}</a>
-						<div class="dropdown-divider"> </div>
-					<form action="Login" method="post">
-						<button name="salir" value="salir" class="dropdown-item" href="#">Salir</button>
-				    </form>		
-				</div>
+			<button style="border: none"
+				class="btn btn-outline-light dropdown-toggle" type="button"
+				id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false">${personaLogueada.getNombre()}
+				${personaLogueada.getApellido()}</button>
+			<div class="dropdown-menu text-center"
+				aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#"> <img
+					src="style/img/index.png"
+					alt="100" width="100" />
+				</a> <a class="dropdown-item" href="#">${personaLogueada.getUsuario()}</a>
+				<a class="dropdown-item" href="#">${personaLogueada.getEmail()}</a>
+				<div class="dropdown-divider"></div>
+				<form action="Login" method="post">
+					<button name="salir" value="salir" class="dropdown-item" href="#">Salir</button>
+				</form>
 			</div>
+		</div>
 	</nav>
 
-	<h3>Holaaaaaaa!!!!</h3>
+	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>

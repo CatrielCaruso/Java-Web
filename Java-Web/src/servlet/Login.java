@@ -67,7 +67,7 @@ public class Login extends HttpServlet {
 						request.getRequestDispatcher("PersonaCrud.jsp").forward(request, response);
 					}else {
 						
-						request.getRequestDispatcher("Principal.jsp").forward(request, response);
+						request.getRequestDispatcher("Home.jsp").forward(request, response);
 						
 						
 					}
