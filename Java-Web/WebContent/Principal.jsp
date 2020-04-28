@@ -39,7 +39,7 @@
 					<form action="DireccionNavbar" method="post">
 						<button name="contacto" value="salir"
 							style="margin-left: 10px; border: none"
-							class="btn btn-outline-light" href="#">Contacto</button>
+							class="btn btn-outline-light" href="#">CONTACTOS</button>
 					</form>
 				</li>
 				<li class="nav-item"><a style="margin-left: 10px; border: none"
