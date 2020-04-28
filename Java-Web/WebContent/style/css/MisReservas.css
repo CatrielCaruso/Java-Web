@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+
+.tipo{
+	margin-top:25px;
+	font-family: Brush Script MT;
+	margin-left:0px;
+	font-size:40px;
+	color:blue;
+}
+.tipot{
+	
+	margin-left:10px;
+}
+
+.tipo1{
+	margin-top:25px;
+	font-family: Brush Script MT;
+	margin-right:50px;
+	font-size:40px;
+	
+}
+
+
+.cont{
+	
+	margin-top:4px;
+	font-family: Brush Script MT;
+	font-size:32px;
+	color:;
+}

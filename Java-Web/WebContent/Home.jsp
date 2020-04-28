@@ -5,18 +5,18 @@
 <head>
 <meta charset="ISO-8859-1">
 
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">
+
+	
 <link href="style/css/Home.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-        
-        <script>
-          new WOW().init();
-        </script>
-		
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<script>
+	new WOW().init();
+</script>
+
 <title>Home</title>
 </head>
 <body>
@@ -56,10 +56,10 @@
 						role="button" data-slide="prev"> <span
 						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 						class="sr-only">Previous</span>
-					</a> <a class="carousel-control-next" href="#carouselExampleIndicators1"
-						role="button" data-slide="next"> <span
-						class="carousel-control-next-icon" aria-hidden="true"></span> <span
-						class="sr-only">Next</span>
+					</a> <a class="carousel-control-next"
+						href="#carouselExampleIndicators1" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
 					</a>
 				</div>
 
@@ -69,7 +69,17 @@
 		</div>
 
 		<div class="row">
-			<div class=" color3 col-sm-12">Pie</div>
+			<div class=" color3 col-sm-12">
+				<form method="post" action="Reservas">
+                   <input type="hidden" name="idcabana" value="1">
+					<button type="submit" class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
+					
+					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
+
+				</form>
+
+
+			</div>
 		</div>
 	</div>
 
@@ -77,11 +87,11 @@
 
 
 
-	
-		
-		
-		
-		<div class=" borde container center wow animated fadeInRight">
+
+
+
+
+	<div class=" borde container center wow animated fadeInRight">
 
 		<div class="row">
 
@@ -114,10 +124,10 @@
 						role="button" data-slide="prev"> <span
 						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 						class="sr-only">Previous</span>
-					</a> <a class="carousel-control-next" href="#carouselExampleIndicators2"
-						role="button" data-slide="next"> <span
-						class="carousel-control-next-icon" aria-hidden="true"></span> <span
-						class="sr-only">Next</span>
+					</a> <a class="carousel-control-next"
+						href="#carouselExampleIndicators2" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
 					</a>
 				</div>
 
@@ -127,15 +137,24 @@
 		</div>
 
 		<div class="row">
-			<div class=" color3 col-sm-12">Pie</div>
+			<div class=" color3 col-sm-12">
+				<form method="post" action="Reservas">
+                     <input type="hidden" name="idcabana" value="2">
+					<button class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
+					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
+
+				</form>
+
+			</div>
 		</div>
 	</div>
 
-<div class=" borde container center wow animated fadeInLeft">
+	<div class=" borde container center wow animated fadeInLeft">
 
 		<div class="row">
 
-			<div class=" color1 col-sm-12">Ushuaia la ciudad más austral del mundo</div>
+			<div class=" color1 col-sm-12">Ushuaia la ciudad más austral
+				del mundo</div>
 		</div>
 
 		<div class="row">
@@ -164,10 +183,10 @@
 						role="button" data-slide="prev"> <span
 						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 						class="sr-only">Previous</span>
-					</a> <a class="carousel-control-next" href="#carouselExampleIndicators3"
-						role="button" data-slide="next"> <span
-						class="carousel-control-next-icon" aria-hidden="true"></span> <span
-						class="sr-only">Next</span>
+					</a> <a class="carousel-control-next"
+						href="#carouselExampleIndicators3" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
 					</a>
 				</div>
 
@@ -177,12 +196,21 @@
 		</div>
 
 		<div class="row">
-			<div class=" color3 col-sm-12">Pie</div>
+			<div class=" color3 col-sm-12">
+				<form method="post" action="Reservas">
+                      <input type="hidden" name="idcabana" value="3">
+					<button class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
+					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
+
+				</form>
+
+
+			</div>
 		</div>
 	</div>
 
 
-<div class=" borde container center wow animated fadeInRight">
+	<div class=" borde container center wow animated fadeInRight">
 
 		<div class="row">
 
@@ -202,23 +230,23 @@
 					</ol>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="style/img/chalten1.jpg" class="d-block w-100" alt="">
+							<img src="style/img/bolson1.jpg" class="d-block w-100" alt="">
 						</div>
 						<div class="carousel-item">
-							<img src="style/img/chalten2.jpg" class="d-block w-100" alt="">
+							<img src="style/img/bolson2.jpg" class="d-block w-100" alt="">
 						</div>
 						<div class="carousel-item">
-							<img src="style/img/chalten3.jpg" class="d-block w-100" alt="">
+							<img src="style/img/bolson3.jpg" class="d-block w-100" alt="">
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators4"
 						role="button" data-slide="prev"> <span
 						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 						class="sr-only">Previous</span>
-					</a> <a class="carousel-control-next" href="#carouselExampleIndicators4"
-						role="button" data-slide="next"> <span
-						class="carousel-control-next-icon" aria-hidden="true"></span> <span
-						class="sr-only">Next</span>
+					</a> <a class="carousel-control-next"
+						href="#carouselExampleIndicators4" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
 					</a>
 				</div>
 
@@ -228,16 +256,26 @@
 		</div>
 
 		<div class="row">
-			<div class=" color3 col-sm-12">Pie</div>
+			<div class=" color3 col-sm-12">
+				<form method="post" action="Reservas">
+                      <input type="hidden" name="idcabana" value="4">
+					<button class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
+					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
+
+				</form>
+
+
+
+			</div>
 		</div>
 	</div>
 
 
-<div class=" borde container center wow animated fadeInLeft">
+	<div class=" borde container center wow animated fadeInLeft">
 
 		<div class="row">
 
-			<div class=" color1 col-sm-12 ">Chalten ciudad del tekking</div>
+			<div class=" color1 col-sm-12 ">Esquel</div>
 		</div>
 
 		<div class="row">
@@ -253,23 +291,23 @@
 					</ol>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="style/img/chalten1.jpg" class="d-block w-100" alt="">
+							<img src="style/img/esquel1.jpg" class="d-block w-100" alt="">
 						</div>
 						<div class="carousel-item">
-							<img src="style/img/chalten2.jpg" class="d-block w-100" alt="">
+							<img src="style/img/esquel2.jpg" class="d-block w-100" alt="">
 						</div>
 						<div class="carousel-item">
-							<img src="style/img/chalten3.jpg" class="d-block w-100" alt="">
+							<img src="style/img/esquel3.jpg" class="d-block w-100" alt="">
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators5"
 						role="button" data-slide="prev"> <span
 						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 						class="sr-only">Previous</span>
-					</a> <a class="carousel-control-next" href="#carouselExampleIndicators5"
-						role="button" data-slide="next"> <span
-						class="carousel-control-next-icon" aria-hidden="true"></span> <span
-						class="sr-only">Next</span>
+					</a> <a class="carousel-control-next"
+						href="#carouselExampleIndicators5" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
 					</a>
 				</div>
 
@@ -279,7 +317,18 @@
 		</div>
 
 		<div class="row">
-			<div class=" color3 col-sm-12">Pie</div>
+			<div class=" color3 col-sm-12">
+				<form method="post" action="Reservas">
+				
+                     <input type="hidden" name="idcabana" value="5">
+					<button class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
+					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
+
+				</form>
+
+
+
+			</div>
 		</div>
 	</div>
 
@@ -291,16 +340,5 @@
 
 
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous"></script>
 </body>
 </html>
