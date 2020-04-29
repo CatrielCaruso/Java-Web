@@ -1,14 +1,24 @@
 package servlet;
 
 import java.io.IOException;
+
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.util.Date;
 import controlers.CtrlABMCabana;
 import controlers.CtrlABMPersona;
+import controlers.CtrlABMReserva;
+import entity.Persona;
+import entity.Reserva;
 
 /**
  * Servlet implementation class Reservas
@@ -52,7 +62,7 @@ public class Reservas extends HttpServlet {
 			
 			request.setAttribute("caba", p);
 			
-			request.getRequestDispatcher("MisReservas.jsp").forward(request, response);
+			request.getRequestDispatcher("Reservas.jsp").forward(request, response);
 			
 			
 		}
@@ -66,6 +76,73 @@ public class Reservas extends HttpServlet {
 			
 			
 		}
-	}
+		
+		if (request.getParameter("prereserva") != null) {
+			
+			Reserva r = new Reserva();
+			CtrlABMCabana ctp = new CtrlABMCabana();
+			CtrlABMReserva rc = new CtrlABMReserva();
+			entity.Cabana c = ctp.getById(Integer.parseInt(request.getParameter("idcabana")));	
+			entity.Persona per = (Persona) request.getSession().getAttribute("personaLogueada");	
+			
+			SimpleDateFormat f= new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//YYYY-MM-DD HH-MM-SS
+			
+			
+		
 
+
+		
+			
+
+		
+		
+			
+			
+			
+				try {
+					
+					Date fecha_desde = f.parse(request.getParameter("fecha_desde"));
+					r.setFechaDesde(fecha_desde);
+
+					Date fecha_hasta = f.parse(request.getParameter("fecha_hasta"));
+					r.setFechaHasta(fecha_hasta);
+					
+				
+					
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					}
+			
+			
+			
+			
+			
+			
+			r.setCaba(c); 
+			r.setPer(per);
+			
+			
+			
+			
+			if (rc.estaDisponible(r)){
+				//esta disponible ese elemento para las horas seleccionadas
+				
+				try {
+					System.out.println("reserva creada");
+					rc.add(r);
+					
+					request.getRequestDispatcher("exitoRes.jsp").forward(request, response);
+				} catch (Exception e2) {
+					System.out.println("Aca tira error");
+				}
+			}else {request.getRequestDispatcher("errorAlReservar.jsp").forward(request, response);}
+	}
 }
+
+	
+}
+	
+	
+	
+	
+

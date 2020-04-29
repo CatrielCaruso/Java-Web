@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@include file="../Principal.jsp"%>
 
 
-   <h1>Holaaa</h1>
+
+    <h1>Holaaaa</h1>
 </body>
 </html>

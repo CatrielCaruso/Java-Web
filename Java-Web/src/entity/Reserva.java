@@ -7,7 +7,7 @@ public class Reserva {
 	private int IdReserva;
 	private Date FechaDesde;
 	private Date FechaHasta;
-	private Double PrecioTotal;
+	
 	
 	private Cabana caba;
 	private Persona per;
@@ -16,12 +16,12 @@ public class Reserva {
 		super();
 	}
 
-	public Reserva(int idReserva, Date fechaDesde, Date fechaHasta, Double precioTotal, Cabana caba, Persona per) {
+	public Reserva(int idReserva, Date fechaDesde, Date fechaHasta,  Cabana caba, Persona per) {
 		super();
 		IdReserva = idReserva;
 		FechaDesde = fechaDesde;
 		FechaHasta = fechaHasta;
-		PrecioTotal = precioTotal;
+		
 		this.caba = caba;
 		this.per = per;
 	}
@@ -50,13 +50,7 @@ public class Reserva {
 		FechaHasta = fechaHasta;
 	}
 
-	public Double getPrecioTotal() {
-		return PrecioTotal;
-	}
 
-	public void setPrecioTotal(Double precioTotal) {
-		PrecioTotal = precioTotal;
-	}
 
 	public Cabana getCaba() {
 		return caba;
