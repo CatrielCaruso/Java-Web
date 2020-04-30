@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+
+
+.fondo {
+	background-color:#eeeeee ;
+}
+
+.cont{
+	
+	margin-top:4px;
+	font-family: 'Roboto', sans-serif;
+	font-size:50px;
+	color:#2F4F4F;}
+	
+	
+.contenedor{
+	
+	margin-top:60px;
+	
+}
+	

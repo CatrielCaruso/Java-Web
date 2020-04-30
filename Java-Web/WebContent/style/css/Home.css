@@ -9,9 +9,9 @@
 .borde{ 
 	
 	 margin-top:0px;
-	 border:1px  #9f9f9f solid;
+	 border:1px  black solid;
      margin-top: 125px;
-	 border-radius:2px;
+	 border-radius:10px;
 	box-shadow: 6px 6px 6px black;
 	
 	
@@ -24,31 +24,36 @@
 	background-color:black;
 	margin-top:px;
 	height:70px;
-	font-family: 'Roboto', sans-serif;
+	font-family: Brush Script MT;
 	margin: auto;
-	padding-top: 20px;
+	padding-top: 0px;
 	 font-weight:bold;
-	 font-size:30px;
+	 font-size:50px;
     color:white;
+    border-radius:5px;
+    border:3px  black solid;
 }   
 
 .color2{
-	
+	color: 	#707070;
 	margin-top:25px;
 	margin-bottom:25px;
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+	
 }
 
 .color3{
 	
 	margin-top:75px;
-	border:1px #b9b9b9 solid;
+	
 	height:70px;
 	background-color:black;
 	font-family: 'Roboto', sans-serif;
 	margin: auto;
 	padding-top: 20px;
 	color:white;
+	border-radius:5px;
+	
 }
 
 .carousel-inner img {

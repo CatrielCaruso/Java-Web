@@ -22,7 +22,7 @@
 
 <style>
 .fondo {
-	background-color: white
+	background-color:;
 }
 </style>
 </head>

@@ -1,7 +1,10 @@
 package controlers;
 
 
+import java.util.ArrayList;
+
 import data.DataReserva;
+import entity.Persona;
 import entity.Reserva;
 
 public class CtrlABMReserva {
@@ -29,5 +32,11 @@ public class CtrlABMReserva {
 		dr.add(r);;
 	}
     
-    
+	public ArrayList<Reserva> reservasDePer(Persona logged) {
+		return dr.getReservasdePer(logged);
+		
+	}
+
+
+	
 }

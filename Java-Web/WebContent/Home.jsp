@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 
 
-	
+
 <link href="style/css/Home.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -31,7 +31,14 @@
 		</div>
 
 		<div class="row">
-			<div class=" color2 col-sm-4">Izquierda</div>
+			<div class=" color2 col-sm-4">Comodidad y tranquilidad
+				necesarias para una estadía única. Dos habitaciones con cama
+				matrimonial cada una y además una habitación con cama individual. La
+				cabaña cuenta con dos baños, cocina, heladera, calefacción y aire
+				acondionado. También se cuenta con cochera y parrilleros. A un
+				precio unico de 6500 pesos argentinos por día. Ubicada en una zona
+				muy tranquila pero a la vez muy cerca de los comienzos de los
+				senderos, de restaurantes, panaderías y supermercados</div>
 			<div class="color2 col-sm-8">
 				<div id="carouselExampleIndicators1" class="carousel slide"
 					data-ride="carousel">
@@ -71,10 +78,11 @@
 		<div class="row">
 			<div class=" color3 col-sm-12">
 				<form method="post" action="Reservas">
-                   <input type="hidden" name="idcabana" value="1">
-					<button type="submit" class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
-					
-					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
+					<input type="hidden" name="idcabana" value="1">
+					<button type="submit" class="btn btn-success btn-lg" value=""
+						name="alquilar">Reservar</button>
+
+					<button class="btn btn-info btn-lg" value="Reservar" name="contacto">Contacto</button>
 
 				</form>
 
@@ -99,7 +107,12 @@
 		</div>
 
 		<div class="row">
-			<div class=" color2 col-sm-4">Izquierda</div>
+			<div class=" color2 col-sm-4">La Cabaña Aluen se encuentra en
+				El Calafate, en la región de Santa Cruz, a 4 km del lago Argentino,
+				y ofrecen alojamiento con wifi gratis, zona de parrilla, jardín ,
+				cocina. Cabaña con dos habitacionas, una con cama matrimonial y la
+				otra con con cucheta. Capacidad para 4 personas. El precio por día
+				es de 5000 pesos argentinos.</div>
 			<div class="color2 col-sm-8">
 				<div id="carouselExampleIndicators2" class="carousel slide"
 					data-ride="carousel">
@@ -139,7 +152,7 @@
 		<div class="row">
 			<div class=" color3 col-sm-12">
 				<form method="post" action="Reservas">
-                     <input type="hidden" name="idcabana" value="2">
+					<input type="hidden" name="idcabana" value="2">
 					<button class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
 					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
 
@@ -158,7 +171,13 @@
 		</div>
 
 		<div class="row">
-			<div class=" color2 col-sm-4">Izquierda</div>
+			<div class=" color2 col-sm-4">La Cabaña Sueños del Fin del
+				Mundo ofrece alojamiento en Ushuaia, a 15 km del cerro Castor y a
+				2,8 km del casino Club de Ushuaia. La cabaña se compone, de cocina,
+				baño, comer-living grande, jardín, estacionamiento privado,
+				calefeccion, lavarropa, WIFI. Tiene una habitación grande con una
+				cama matrimonial y una individual. Ideal para 3 personas. Tan solo a
+				un costo de 5500 pesos aragentinos por día.</div>
 			<div class="color2 col-sm-8">
 				<div id="carouselExampleIndicators3" class="carousel slide"
 					data-ride="carousel">
@@ -198,7 +217,7 @@
 		<div class="row">
 			<div class=" color3 col-sm-12">
 				<form method="post" action="Reservas">
-                      <input type="hidden" name="idcabana" value="3">
+					<input type="hidden" name="idcabana" value="3">
 					<button class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
 					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
 
@@ -218,7 +237,13 @@
 		</div>
 
 		<div class="row">
-			<div class=" color2 col-sm-4">Izquierda</div>
+			<div class=" color2 col-sm-4">El equilibrio entre la vida de
+				montaña y el máximo confort. Acogedora cabañas de 85 m2 para 6
+				personas con 2 habitaciones, con vista exterior directa a las
+				motañas. Equipadas con cocina completa, cafetera eléctrica,
+				heladera, microondas, baño completo con secador de pelo, Wi-Fi,
+				lavarropa, calefacción. Atendido por sus dueños. Alquila esta cabaña
+				por solo 5000 pesos argentinos por día.</div>
 			<div class="color2 col-sm-8">
 				<div id="carouselExampleIndicators4" class="carousel slide"
 					data-ride="carousel">
@@ -258,7 +283,7 @@
 		<div class="row">
 			<div class=" color3 col-sm-12">
 				<form method="post" action="Reservas">
-                      <input type="hidden" name="idcabana" value="4">
+					<input type="hidden" name="idcabana" value="4">
 					<button class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
 					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
 
@@ -279,7 +304,13 @@
 		</div>
 
 		<div class="row">
-			<div class=" color2 col-sm-4">Izquierda</div>
+			<div class=" color2 col-sm-4">El alojamiento La Elena está
+				situado en Esquel, en la provincia del Chubut, a 12 km del centro de
+				esquí La Hoya, y ofrece alojamiento con wifi gratis, jardín y
+				estacionamiento privado,calefacción, aire acondicionado, lavarropas,
+				televisor. Tiene 3 habitaciones compuesta con camas matrimonial cada
+				una. Pensado para albergar a 6 personas. Alquile esta cabaña por
+				7000 pesos aragentinos por día.</div>
 			<div class="color2 col-sm-8">
 				<div id="carouselExampleIndicators5" class="carousel slide"
 					data-ride="carousel">
@@ -319,8 +350,8 @@
 		<div class="row">
 			<div class=" color3 col-sm-12">
 				<form method="post" action="Reservas">
-				
-                     <input type="hidden" name="idcabana" value="5">
+
+					<input type="hidden" name="idcabana" value="5">
 					<button class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
 					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
 
@@ -338,7 +369,7 @@
 
 
 
-
+<%@include file="../Footer.jsp"%>
 
 </body>
 </html>

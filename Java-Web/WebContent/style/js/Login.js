@@ -16,7 +16,7 @@ formu.addEventListener("submit", function(e) {
 	} else {
 		console.log("ok");
 		document.getElementById("ingresar").className = 'exito';
-		location.href = "Principal.jsp";
+		location.href = "../../Principal.jsp";
 	}
 	
 });

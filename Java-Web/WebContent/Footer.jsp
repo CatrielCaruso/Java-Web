@@ -5,10 +5,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link href="style/css/Footer.css">
 </head>
 <body>
-  <%@include file="../Principal.jsp" %>
-   <h1> ACÁ estamos!!!</h1>
-<%@include file="../Footer.jsp"%>
+
+  <!-- Footer Links -->
+    <HR class="fuente"> 
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a> UTN CABAÑAS DEL SUR</a>
+  
+</div>
 </body>
 </html>

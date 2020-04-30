@@ -20,7 +20,7 @@ public class DataReserva {
 		try {
 			stmt=FactoryConexion.getInstancia().getConn()
 					.prepareStatement(
-					"insert into reserva ( FechaDesde, FechaHasta,IdPersona,IdCabana) values (?,?,?,?)",
+					"insert into reserva ( FechaDesde, FechaHasta,IdPersona,IdCabana,CantidadDias,PrecioTotal) values (?,?,?,?,?,?)",
 					PreparedStatement.RETURN_GENERATED_KEYS
 					);
 			//stmt.setTimestamp(1, new java.sql.Timestamp(r.getFecha_hora().getTime()));
@@ -28,8 +28,10 @@ public class DataReserva {
  			
 			stmt.setTimestamp(1, new java.sql.Timestamp(r.getFechaDesde().getTime()));
 			stmt.setTimestamp(2, new java.sql.Timestamp(r.getFechaHasta().getTime()));
-			stmt.setInt(2, r.getPer().getIdPersona());
- 			stmt.setInt(3, r.getCaba().getIdCabana());
+			stmt.setInt(3, r.getPer().getIdPersona());
+ 			stmt.setInt(4, r.getCaba().getIdCabana());
+ 			stmt.setInt(5, r.getCantidadDias());
+			stmt.setDouble(6, r.getPrecioTotal());
  			stmt.executeUpdate();
 			keyResultSet=stmt.getGeneratedKeys();
 			if(keyResultSet!=null && keyResultSet.next()){
@@ -87,6 +89,55 @@ public class DataReserva {
 			return (i);	
 		} 
 		 
+	
+	
+	public ArrayList<Reserva> getReservasdePer(Persona per){ //OBTENER RESERVAS POR PERSONA
+		
+		PreparedStatement stmt=null;
+			ResultSet rs=null;
+			ArrayList<Reserva> reservas= new ArrayList<Reserva>();
+			try {
+				stmt = FactoryConexion.getInstancia().getConn()
+						.prepareStatement("select * from reserva r where IdPersona = ? ",
+			 			PreparedStatement.RETURN_GENERATED_KEYS);
+				
+				stmt.setInt(1, per.getIdPersona());
+				
+				
+				rs = stmt.executeQuery();
+				if(rs!=null){
+					while(rs.next()){
+						Reserva r=new Reserva();
+						r.setCaba(new Cabana());
+						r.setIdReserva(rs.getInt("IdReserva"));
+						r.setFechaDesde(rs.getTimestamp("FechaDesde")); 
+						r.setFechaHasta(rs.getTimestamp("FechaHasta")); 
+						
+						r.setPer(per);
+						r.getCaba().setIdCabana(rs.getInt("IdCabana"));
+						r.setCantidadDias(rs.getInt("CantidadDias"));
+						r.setPrecioTotal(rs.getDouble("PrecioTotal"));
+						
+						
+			 			reservas.add(r);
+					}
+				}
+			} catch (SQLException e) {
+				
+				e.printStackTrace();
+			}
+			try {
+				if(rs!=null) rs.close();
+				if(stmt!=null) stmt.close();
+				FactoryConexion.getInstancia().releaseConn();
+			} catch (SQLException e) {	
+				e.printStackTrace();
+			}
+			return reservas;	
+		}
+	
+	
+	
 	
 
 }

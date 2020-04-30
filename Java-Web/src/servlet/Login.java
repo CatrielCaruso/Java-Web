@@ -46,9 +46,12 @@ public class Login extends HttpServlet {
 		//doGet(request, response);
 		
 		    
+	
+		
+		
 		if (request.getParameter("loguear") != null) {
-		
-		
+			
+			
 		    String user=request.getParameter("user");
 			String pass=request.getParameter("pass");
 			
