@@ -61,6 +61,7 @@ public class Reservas extends HttpServlet {
 		CtrlABMReserva ctrl = new CtrlABMReserva();
 		//CtrlABMPersona cp = new CtrlABMPersona();			
 		entity.Persona per = (Persona) request.getSession().getAttribute("personaLogueada");
+		 request.getSession().getAttribute("caba");
 		res=ctrl.reservasDePer(per);
 		
 		

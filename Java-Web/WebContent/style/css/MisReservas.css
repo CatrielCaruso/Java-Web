@@ -21,7 +21,20 @@
 }
 
 
-
+.coli{
+	margin-top:25px;
+	margin-bottom:25px;
+	text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+	margin-left:550px;
+	width:400px;
+}
 
 
 

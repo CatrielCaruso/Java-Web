@@ -5,25 +5,35 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+<link href="style/css/MisReservas.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
 	<%@include file="../Principal.jsp"%>
 
 
-	<h1>Holaaa</h1>
+	
 
 	<form action="Reservas" method="POST">
-		<input type="submit" name="listar" value="listar"
-			class="btn btn-info btn-lg">
+	
+	  <div class="shake-slow shake-constant shake-constant--hover">
+		<input type="submit" name="listar" value="Hace click para listar tus reservas!!"
+			class="coli">
+			
+	</div>	
+			
 	</form>
 
 
 
 
+<div class="col-sm-10">
 
 
-
-	<table>
+	<table class="table table-hover">
 
 		<thead>
 			<tr>
@@ -33,11 +43,12 @@
 				<th>Cantidad dias:</th>
 				<th>Precio total:</th>
 				<th>Lugar:</th>
+				<th>Nombre:</th>
 
 			</tr>
 		</thead>
 
-		<tbody>
+		<tbody class="animated fadeIn">
 			<c:forEach items="${todasReservas}" var="r">
 				<tr>
 
@@ -55,6 +66,9 @@
 
 		</tbody>
 	</table>
+</div>	
+
+
 	<%@include file="../Footer.jsp"%>
 </body>
 </html>

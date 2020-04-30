@@ -108,16 +108,17 @@ public class DataReserva {
 				if(rs!=null){
 					while(rs.next()){
 						Reserva r=new Reserva();
-						r.setCaba(new Cabana());
+						Cabana c=new Cabana();
 						r.setIdReserva(rs.getInt("IdReserva"));
 						r.setFechaDesde(rs.getTimestamp("FechaDesde")); 
 						r.setFechaHasta(rs.getTimestamp("FechaHasta")); 
 						
 						r.setPer(per);
-						r.getCaba().setIdCabana(rs.getInt("IdCabana"));
+						
+						c.setIdCabana(rs.getInt("IdCabana"));
 						r.setCantidadDias(rs.getInt("CantidadDias"));
 						r.setPrecioTotal(rs.getDouble("PrecioTotal"));
-						
+						r.setCaba(c);
 						
 			 			reservas.add(r);
 					}
