@@ -1,66 +1,63 @@
 @charset "ISO-8859-1";
 
-
-	.body{
+.body {
 	
 }
 
-
-.borde{ 
-	
-	 margin-top:0px;
-	 border:1px  black solid;
-     margin-top: 125px;
-	 border-radius:10px;
+.borde {
+	margin-top: 0px;
+	border: 1px black solid;
+	margin-top: 125px;
+	border-radius: 10px;
 	box-shadow: 6px 6px 6px black;
-	
-	
 }
 
-	
-	
-
-.color1{
-	background-color:black;
-	margin-top:px;
-	height:70px;
+.color1 {
+	background-color: black;
+	margin-top: px;
+	height: 70px;
 	font-family: Brush Script MT;
 	margin: auto;
 	padding-top: 0px;
-	 font-weight:bold;
-	 font-size:50px;
-    color:white;
-    border-radius:5px;
-    border:3px  black solid;
-}   
-
-.color2{
-	color: 	#707070;
-	margin-top:25px;
-	margin-bottom:25px;
-    font-family: 'Roboto', sans-serif;
-	
+	font-weight: bold;
+	font-size: 50px;
+	color: white;
+	border-radius: 5px;
+	border: 3px black solid;
 }
 
-.color3{
-	
-	margin-top:75px;
-	
-	height:70px;
-	background-color:black;
+.color2 {
+	color: #707070;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.color3 {
+	margin-top: 75px;
+	height: 70px;
+	background-color: black;
 	font-family: 'Roboto', sans-serif;
 	margin: auto;
 	padding-top: 20px;
-	color:white;
-	border-radius:5px;
-	
+	color: white;
+	border-radius: 5px;
 }
 
 .carousel-inner img {
-    width: 100%;
-    max-height: 350px;
+	width: 100%;
+	max-height: 350px;
 }
 
-.carousel-inner{
- height: 300px;
+.carousel-inner {
+	height: 300px;
+}
+
+iframe {
+	width: 100%;
+}
+
+.contacto {
+	margin-top: 50px;
+	font-family: 'Roboto', sans-serif;
 }

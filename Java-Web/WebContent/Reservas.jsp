@@ -54,7 +54,7 @@
 					<div class="row">WIFI: ${caba.getWiFi()}</div>
 					<div class="row">Calefacción:${caba.getCalefaccion()}</div>
 					<div class="row">Televisor:${caba.getTelevisor()}</div>
-                     
+
 
 				</div>
 
@@ -71,24 +71,23 @@
 
 
 						<div class="form-group">
-							<label>Fecha desde:</label> <input type="text"  name="fecha_desde"
+							<label>Fecha desde:</label> <input type="text" name="fecha_desde"
 								class="form-control" placeholder="DD/MM/AAAA">
 						</div>
 
 						<div class="form-group">
-							<label>Fecha hasta:</label> <input type="text"
-								name="fecha_hasta" class="form-control"
-								placeholder="DD/MM/AAAA">
+							<label>Fecha hasta:</label> <input type="text" name="fecha_hasta"
+								class="form-control" placeholder="DD/MM/AAAA">
 						</div>
 
 
-  
 
 
 
 
 
-                          <input type="hidden" name="idcabana" value="${caba.getIdCabana()}">
+
+						<input type="hidden" name="idcabana" value="${caba.getIdCabana()}">
 						<input type="submit" name="prereserva" value="RESERVAR"
 							class="btn btn-success btn-lg">
 
@@ -113,8 +112,8 @@
 		</div>
 
 	</div>
-        
-        <%@include file="../Footer.jsp"%>
+
+	<%@include file="../Footer.jsp"%>
 
 </body>
 </html>

@@ -80,7 +80,6 @@ public class GestionPersona extends HttpServlet {
 			CtrlABMPersona ctp = new CtrlABMPersona();
 
 			int id = Integer.parseInt(request.getParameter("borrar"));
-			
 
 			p = ctp.getById(id);
 			ctp.delete(p);
@@ -94,25 +93,22 @@ public class GestionPersona extends HttpServlet {
 			CtrlABMPersona ctp = new CtrlABMPersona();
 
 			int id = Integer.parseInt(request.getParameter("modificar"));
-			
-             
+
 			p = ctp.getById(id);
-			
+
 			request.setAttribute("persona", p);
-			
+
 			this.doGet(request, response);
-			
+
 		}
 
-		
-		
 		if (request.getParameter("actualizar") != null) {
 
 			entity.Persona p = new entity.Persona();
 			CtrlABMPersona ctp = new CtrlABMPersona();
-            
+
 			p.setIdPersona(Integer.parseInt(request.getParameter("idpersona")));
-			
+
 			p.setNombre(request.getParameter("nombre"));
 			p.setApellido(request.getParameter("apellido"));
 			p.setDni(request.getParameter("dni"));
@@ -121,17 +117,14 @@ public class GestionPersona extends HttpServlet {
 			p.setEmail(request.getParameter("email"));
 			p.setTelefono(request.getParameter("telefono"));
 			p.setRol(request.getParameter("rol"));
-			
-			
-			
+
 			ctp.update(p);
 			this.doGet(request, response);
-			
-		}else {
+
+		} else {
 			this.doGet(request, response);
 		}
-		
-		
+
 	}
 
 }
