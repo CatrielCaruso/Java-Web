@@ -19,3 +19,37 @@
 	
 }
 	
+
+.contai{
+	border: 2px black solid;
+	height: 300px;
+	margin-top: 200px;
+	border-radius: 10px;
+	box-shadow: 6px 6px 6px black;
+}
+
+
+
+
+.coli{
+	margin-top:25px;
+	margin-bottom:25px;
+	text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+	margin-left:550px;
+	width:400px;
+}
+
+
+.conte {
+	margin-top: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 50px;
+	color:red;
+}	

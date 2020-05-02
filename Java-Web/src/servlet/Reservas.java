@@ -112,7 +112,7 @@ public class Reservas extends HttpServlet {
 
 			try {
 
-				DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+				DateFormat f = new SimpleDateFormat("yyyy/MM/dd");
 
 				fecha_desde = f.parse(fechaDesde);
 				r.setFechaDesde(fecha_desde);
@@ -141,8 +141,10 @@ public class Reservas extends HttpServlet {
 
 			System.out.println(dias);
 			System.out.println(costo);
+			System.out.println(fecha_desde);
+			
 			if (rc.estaDisponible(r)) {
-				// esta disponible ese elemento para las horas seleccionadas
+				
 
 				try {
 					// System.out.println("reserva creada");
@@ -204,6 +206,24 @@ public class Reservas extends HttpServlet {
 
 		}
 
+		
+		if (request.getParameter("error") != null) {
+
+			Reserva r = new Reserva();
+
+			r = (Reserva) request.getSession().getAttribute("reservahecha");
+
+			request.getSession().setAttribute("reservahecha", r);
+
+			request.getRequestDispatcher("Reservas.jsp").forward(request, response);
+
+		}
+		
+		
+		
+		
 	}
+	
+	
 
 }

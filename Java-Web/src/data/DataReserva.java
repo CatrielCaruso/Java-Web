@@ -47,16 +47,19 @@ public class DataReserva {
 
 	public boolean estaDisponible(Reserva r) {
 
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+		java.util.Date date = new Date();
+		
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		boolean i = true;
 		try {
 			stmt = FactoryConexion.getInstancia().getConn().prepareStatement(
-					"select * from reserva r  where r.IdCabana=? AND r.FechaDesde >= ? AND r.FechaHasta <= ?   ");
+					"select * from reserva r  where r.IdCabana=? AND r.FechaDesde >= ? AND r.FechaHasta <= ?");
 
 			stmt.setInt(1, r.getCaba().getIdCabana());
-			stmt.setTimestamp(2, new java.sql.Timestamp(r.getFechaDesde().getTime()));
-			stmt.setTimestamp(3, new java.sql.Timestamp(r.getFechaHasta().getTime()));
+			stmt.setString(2, dateFormat.format(r.getFechaDesde().getTime()));
+			stmt.setString(3, dateFormat.format(r.getFechaHasta().getTime()));
 
 			rs = stmt.executeQuery();
 			if (rs != null && rs.next()) {

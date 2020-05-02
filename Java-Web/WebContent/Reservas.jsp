@@ -72,12 +72,12 @@
 
 						<div class="form-group">
 							<label>Fecha desde:</label> <input type="text" name="fecha_desde"
-								class="form-control" placeholder="DD/MM/AAAA">
+								class="form-control" placeholder="AAAA/MM/DD">
 						</div>
 
 						<div class="form-group">
 							<label>Fecha hasta:</label> <input type="text" name="fecha_hasta"
-								class="form-control" placeholder="DD/MM/AAAA">
+								class="form-control" placeholder="AAAA/MM/DD">
 						</div>
 
 

@@ -58,6 +58,12 @@
 						<div class="carousel-item">
 							<img src="style/img/chalten3.jpg" class="d-block w-100" alt="">
 						</div>
+						<div class="carousel-item">
+							<img src="style/img/chalten4.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/chalten5.jpg" class="d-block w-100" alt="">
+						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators1"
 						role="button" data-slide="prev"> <span
@@ -82,7 +88,8 @@
 					<button type="submit" class="btn btn-success btn-lg" value=""
 						name="alquilar">Reservar</button>
 
-					<button class="btn btn-info btn-lg" value="Reservar" name="contacto">Contacto</button>
+					<button class="btn btn-info btn-lg" value="Reservar"
+						name="contacto">Contacto</button>
 
 				</form>
 
@@ -131,6 +138,12 @@
 						</div>
 						<div class="carousel-item">
 							<img src="style/img/calafate3.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/calafate4.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/calafate5.jpg" class="d-block w-100" alt="">
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators2"
@@ -197,6 +210,12 @@
 						<div class="carousel-item">
 							<img src="style/img/ushuaia3.jpg" class="d-block w-100" alt="">
 						</div>
+						<div class="carousel-item">
+							<img src="style/img/ushuaia4.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/ushuaia5.jpg" class="d-block w-100" alt="">
+						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators3"
 						role="button" data-slide="prev"> <span
@@ -262,6 +281,12 @@
 						</div>
 						<div class="carousel-item">
 							<img src="style/img/bolson3.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/bolson4.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/bolson5.jpg" class="d-block w-100" alt="">
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators4"
@@ -330,6 +355,12 @@
 						<div class="carousel-item">
 							<img src="style/img/esquel3.jpg" class="d-block w-100" alt="">
 						</div>
+						<div class="carousel-item">
+							<img src="style/img/esquel4.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/esquel5.jpg" class="d-block w-100" alt="">
+						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators5"
 						role="button" data-slide="prev"> <span
@@ -369,7 +400,7 @@
 
 
 
-<%@include file="../Footer.jsp"%>
+	<%@include file="../Footer.jsp"%>
 
 </body>
 </html>
