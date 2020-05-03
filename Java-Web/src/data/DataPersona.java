@@ -229,4 +229,54 @@ public class DataPersona {
 		}
 	}
 
+	
+	
+	public ArrayList<Persona> Nombre(String nombre) {
+		
+		ResultSet rs = null;
+		PreparedStatement stmt = null;
+		ArrayList<Persona> pers = new ArrayList<Persona>();
+		try {
+			stmt = FactoryConexion.getInstancia().getConn()
+					.prepareStatement("select * from persona where Apellido=?");
+			
+			stmt.setString(1, nombre);
+			rs = stmt.executeQuery();
+			if (rs != null) {
+				while (rs.next()) {
+					Persona p = new Persona();
+					p.setIdPersona(rs.getInt("IdPersona"));
+					p.setDni(rs.getString("Dni"));
+					p.setNombre(rs.getString("Nombre"));
+					p.setApellido(rs.getString("Apellido"));
+					p.setEmail(rs.getString("Email"));
+					p.setTelefono(rs.getString("Telefono"));
+					p.setContrasena(rs.getString("Contrasena"));
+					p.setUsuario(rs.getString("Usuario"));
+					p.setRol(rs.getString("Rol"));
+					pers.add(p);
+				}
+			}
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+		try {
+			if (rs != null)
+				rs.close();
+			if (stmt != null)
+				stmt.close();
+			FactoryConexion.getInstancia().releaseConn();
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+		return pers;
+
+	}
+	
+	
+	
 }

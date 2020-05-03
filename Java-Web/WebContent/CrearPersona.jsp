@@ -63,11 +63,14 @@
 					
 					<input type="hidden" name="rol" value="cliente" readonly="readonly">
 					</div>
+					
+					
+					<input type="submit"
+							name="volver" value="Volver" class="btn btn-primary btn-lg">
 					<input type="submit" name="acciones" value="Agregar"
 						class="btn btn-success btn-lg">
 				
-				      <input type="submit"
-							name="volver" value="Volver" class="btn btn-primary btn-lg">
+				      
 				
 				</form>
 

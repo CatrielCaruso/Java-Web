@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controlers.CtrlABMPersona;
+import entity.Persona;
 
 /**
  * Servlet implementation class RegistrarPersona
@@ -103,7 +104,24 @@ public class RegistrarPersona extends HttpServlet {
 			
 			this.doGet(request, response);
 		}
-      
+      if (request.getParameter("buscar") != null) {
+    	  
+    	  ArrayList<entity.Persona> alp;
+  		CtrlABMPersona ctp = new CtrlABMPersona();
+
+			
+			String nombre = request.getParameter("nombre");
+			System.out.println(nombre);
+			
+			alp =  ctp.Nombre(nombre);
+			
+
+			request.setAttribute("allPeople", alp);
+    	  
+    		request.getRequestDispatcher("PersonaCrud.jsp").forward(request, response);
+    	  
+    	  
+      }
 	}
 
 }

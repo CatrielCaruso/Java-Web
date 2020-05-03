@@ -1,6 +1,7 @@
 package controlers;
 
 import entity.Persona;
+import entity.Reserva;
 
 import java.util.ArrayList;
 
@@ -41,4 +42,9 @@ public class CtrlABMPersona {
 		dataPer.actualizar(newp);
 	}
 
+	public ArrayList<Persona> Nombre(String nombre) {
+		dataPer = new DataPersona();
+		return dataPer.Nombre(nombre);
+	}
+	
 }

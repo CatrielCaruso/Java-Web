@@ -20,16 +20,18 @@
 	<%@include file="../PrincipalAdministrador.jsp"%>
 
 
-
+<form method="post" action="RegistrarPersona">
 	<div class="row">
 
 		<div class="col-sm-6  buscador">
 			<div class="input-group mb-3">
-				<input type="text" class="form-control"
-					placeholder="Ingrese nombre de usuario"
-					aria-label="Recipient's username" aria-describedby="basic-addon2">
+				<input  class="form-control"
+					placeholder="Ingrese apellido del cliente"
+					aria-label="Recipient's username" aria-describedby="basic-addon2" type="text" name="nombre">
 				<div class="input-group-append">
-					<button class="btn btn-success" type="button">Buscar</button>
+				
+					<button type="submit" class="btn btn-success"  name="buscar" type="button">Buscar</button>
+				 
 				</div>
 
 
@@ -37,7 +39,7 @@
 			</div>
 		</div>
 		
-		
+</form>		
 		<div class="col-sm-6 ">
 		<form method="post" action="RegistrarPersona">
 			<input type="submit" name="crear" value="Crear nuevo usuario"
@@ -48,6 +50,9 @@
 
 
 	</div>
+	
+	
+	
 	<div class="animated fadeIn">
 
 
