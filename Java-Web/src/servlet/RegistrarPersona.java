@@ -1,6 +1,8 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,6 +32,13 @@ public class RegistrarPersona extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		ArrayList<entity.Persona> alp;
+		CtrlABMPersona ctp = new CtrlABMPersona();
+
+		alp = ctp.getAll();
+
+		request.setAttribute("allPeople", alp);
+		request.getRequestDispatcher("PersonaCrud.jsp").forward(request, response);
 	}
 
 	/**
@@ -60,7 +69,41 @@ public class RegistrarPersona extends HttpServlet {
 		
 
 		}
+		
+		
+      if (request.getParameter("crear") != null) {
+			
+			
+			request.getRequestDispatcher("CrearPersona.jsp").forward(request, response);
+		}
 
+      
+      if (request.getParameter("acciones") != null) {
+
+			entity.Persona p = new entity.Persona();
+			CtrlABMPersona ctp = new CtrlABMPersona();
+
+			p.setApellido(request.getParameter("apellido"));
+			p.setNombre(request.getParameter("nombre"));
+			p.setDni(request.getParameter("dni"));
+			p.setEmail(request.getParameter("email"));
+			p.setTelefono(request.getParameter("telefono"));
+			p.setUsuario(request.getParameter("usuario"));
+			p.setContrasena(request.getParameter("contrasena"));
+			p.setRol(request.getParameter("rol"));
+			ctp.add(p);
+
+			this.doGet(request, response);
+
+		}
+      
+      if (request.getParameter("volver") != null) {
+			
+			
+			
+			this.doGet(request, response);
+		}
+      
 	}
 
 }

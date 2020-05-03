@@ -50,24 +50,7 @@ public class GestionPersona extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		if (request.getParameter("accion") != null) {
-
-			entity.Persona p = new entity.Persona();
-			CtrlABMPersona ctp = new CtrlABMPersona();
-
-			p.setApellido(request.getParameter("apellido"));
-			p.setNombre(request.getParameter("nombre"));
-			p.setDni(request.getParameter("dni"));
-			p.setEmail(request.getParameter("email"));
-			p.setTelefono(request.getParameter("telefono"));
-			p.setUsuario(request.getParameter("usuario"));
-			p.setContrasena(request.getParameter("contrasena"));
-			p.setRol(request.getParameter("rol"));
-			ctp.add(p);
-
-			this.doGet(request, response);
-
-		}
+		
 		// doGet(request, response);
 
 		if (request.getParameter("listar") != null) {
@@ -98,8 +81,7 @@ public class GestionPersona extends HttpServlet {
 
 			request.setAttribute("persona", p);
 
-			this.doGet(request, response);
-
+			request.getRequestDispatcher("ModificarPersona.jsp").forward(request, response);
 		}
 
 		if (request.getParameter("actualizar") != null) {
@@ -125,6 +107,17 @@ public class GestionPersona extends HttpServlet {
 			this.doGet(request, response);
 		}
 
+		if (request.getParameter("volver") != null) {
+	
+	
+			request.getRequestDispatcher("PersonaCrud.jsp").forward(request, response);
+			this.doGet(request, response);
+		}
+		
 	}
+	
+	
+	
+	
 
 }

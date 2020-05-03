@@ -67,7 +67,7 @@ public class Login extends HttpServlet {
 					if (per.getRol().equals("Administrador")) {
 				    
 						
-						request.getRequestDispatcher("PersonaCrud.jsp").forward(request, response);
+						request.getRequestDispatcher("HomeAdministrador.jsp").forward(request, response);
 					}else {
 						
 						request.getRequestDispatcher("Home.jsp").forward(request, response);

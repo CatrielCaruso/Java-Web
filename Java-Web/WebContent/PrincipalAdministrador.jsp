@@ -1,34 +1,19 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-
-
-
-
-
+<title>Administrador</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-
-
-
-
-
-<style>
-.fondo {
-	background-color:;
-}
-</style>
 </head>
-<body class="fondo">
+<body>
 
-	<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+
+<nav class="navbar navbar-expand-lg  navbar-dark bg-secondary">
 
 
 		<div class="collapse navbar-collapse" id="navbarNav">
@@ -36,25 +21,19 @@
 				<li class="nav-item active">
 					<form action="DireccionNavbar" method="post">
 
-						<button name="home" value="salir" class="btn btn-outline-light"
-							style="margin-left: 10px; border: none" class="nav-link" href="#">Home</button>
+						<button name="crudreservas" value="salir" class="btn btn-outline-light"
+							style="margin-left: 10px; border: none" class="nav-link" href="#">Gestión Reservas</button>
 					</form>
 				</li>
 
 				<li class="nav-item">
 					<form action="DireccionNavbar" method="post">
-						<button name="reservas" value="salir"
+						<button name="crud" value="salir"
 							style="margin-left: 10px; border: none"
-							class="btn btn-outline-light" href="#">Mis reservas</button>
+							class="btn btn-outline-light" href="#">Gestión Usuarios</button>
 					</form>
 				</li>
-				<li class="nav-item">
-					<form action="DireccionNavbar" method="post">
-						<button name="contacto" value="salir"
-							style="margin-left: 10px; border: none"
-							class="btn btn-outline-light" href="#">Contacto</button>
-					</form>
-				</li>
+				
 				<li class="nav-item"><a style="margin-left: 10px; border: none"
 					class="btn btn-outline-light" href="#" tabindex="-1"
 					aria-disabled="true"></a></li>
@@ -85,7 +64,12 @@
 
 
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>
 
@@ -100,7 +84,6 @@
 		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
 		crossorigin="anonymous"></script>
-
 
 </body>
 </html>
