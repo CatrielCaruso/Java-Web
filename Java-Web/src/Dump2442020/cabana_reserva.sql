@@ -16,34 +16,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `persona`
+-- Table structure for table `reserva`
 --
 
-DROP TABLE IF EXISTS `persona`;
+DROP TABLE IF EXISTS `reserva`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `persona` (
-  `IdPersona` int NOT NULL AUTO_INCREMENT,
-  `Dni` varchar(45) DEFAULT NULL,
-  `Apellido` varchar(45) DEFAULT NULL,
-  `Nombre` varchar(45) DEFAULT NULL,
-  `Email` varchar(45) DEFAULT NULL,
-  `Telefono` varchar(45) DEFAULT NULL,
-  `Usuario` varchar(45) DEFAULT NULL,
-  `Contrasena` varchar(45) DEFAULT NULL,
-  `Rol` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`IdPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `reserva` (
+  `IdReserva` int NOT NULL AUTO_INCREMENT,
+  `FechaDesde` date DEFAULT NULL,
+  `FechaHasta` date DEFAULT NULL,
+  `IdPersona` int NOT NULL,
+  `IdCabana` int NOT NULL,
+  `CantidadDias` int DEFAULT NULL,
+  `PrecioTotal` double DEFAULT NULL,
+  PRIMARY KEY (`IdReserva`),
+  KEY `IdPersona_idx` (`IdPersona`),
+  KEY `IdCabana_idx` (`IdCabana`),
+  CONSTRAINT `IdCabana` FOREIGN KEY (`IdCabana`) REFERENCES `cabana` (`IdCabana`),
+  CONSTRAINT `IdPersona` FOREIGN KEY (`IdPersona`) REFERENCES `persona` (`IdPersona`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `persona`
+-- Dumping data for table `reserva`
 --
 
-LOCK TABLES `persona` WRITE;
-/*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-INSERT INTO `persona` VALUES (6,'9999999999999','Topo','Perezoso','12344','122344','topo','tiopo','Administrador'),(36,'12345','caruso','catriel','@@@@','1234','cat','catri','Administrador'),(37,'122345677','Gaitan','Emanuel','@@@','12345','ema','nuel','Cliente'),(38,'123','Nico','Nico','@@@q','122344','nic','olas','Cliente'),(42,'3456','Caruso','Pehuel','@@@@@','1234','pepe','argento','Cliente'),(46,'fhhhhh','gfh','fhfh','ddgg','fffdd','checho','intelisano','cliente'),(48,'12333','Gimenez','Rokw','@@@@@','4562921','roke','celeste','cliente'),(49,'2334455666','Bertolero','Marianito','@@@@@@@@@','23456777','apu','black','cliente');
-/*!40000 ALTER TABLE `persona` ENABLE KEYS */;
+LOCK TABLES `reserva` WRITE;
+/*!40000 ALTER TABLE `reserva` DISABLE KEYS */;
+INSERT INTO `reserva` VALUES (3,'2020-02-01','2020-02-06',37,1,5,32500),(5,'2020-05-01','2020-05-02',37,2,1,5000),(11,'2020-06-29','2020-07-01',42,1,2,13000);
+/*!40000 ALTER TABLE `reserva` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

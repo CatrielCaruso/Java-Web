@@ -36,4 +36,16 @@ public class CtrlABMReserva {
 		dr.borrar(r);
 	}
 
+	public ArrayList<Reserva> getAll(){
+		return dr.getAll();}
+	
+	
+	
+	public void update(Reserva newp) {
+
+		dr.actualizar(newp);
+	}
+	
+	
+	
 }

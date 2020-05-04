@@ -54,10 +54,25 @@ public class Reservas extends HttpServlet {
 		// CtrlABMPersona cp = new CtrlABMPersona();
 		entity.Persona per = (Persona) request.getSession().getAttribute("personaLogueada");
 		request.getSession().getAttribute("caba");
-		res = ctrl.reservasDePer(per);
-
-		request.setAttribute("todasReservas", res);
-		request.getRequestDispatcher("MisReservas.jsp").forward(request, response);
+		
+		
+		if(per.getRol().equals("Administrador")) {
+		
+	          res=ctrl.getAll();
+	          
+	          
+	          request.setAttribute("todasReservas", res);
+				request.getRequestDispatcher("HomeAdministrador.jsp").forward(request, response);
+		}else {
+			
+			
+			res = ctrl.reservasDePer(per);
+			
+			request.setAttribute("todasReservas", res);
+			request.getRequestDispatcher("MisReservas.jsp").forward(request, response);
+			
+		}
+		
 
 	}
 
@@ -220,10 +235,184 @@ public class Reservas extends HttpServlet {
 		}
 		
 		
+		if (request.getParameter("modificar") != null) {
+
+			entity.Reserva r = new entity.Reserva();
+			CtrlABMReserva ctp = new CtrlABMReserva();
+
+			int id = Integer.parseInt(request.getParameter("modificar"));
+
+			r = ctp.getById(id);
+
+			request.setAttribute("reserva", r);
+
+			request.getRequestDispatcher("ModificarReserva.jsp").forward(request, response);
+		}
+		
+		
+		
+		
+		
+		if (request.getParameter("actualizar") != null) {
+
+			
+			entity.Reserva r = new entity.Reserva();
+			CtrlABMReserva cr = new CtrlABMReserva();
+
+			int idr = Integer.parseInt(request.getParameter("idreserva"));
+
+			r = cr.getById(idr);
+			
+			
+			
+			
+			CtrlABMCabana ctp = new CtrlABMCabana();
+		
+			entity.Cabana c = ctp.getById(Integer.parseInt(request.getParameter("idcabana")));
+			
+			
+			entity.Persona p = new entity.Persona();
+			CtrlABMPersona cp = new CtrlABMPersona();
+
+			int id = Integer.parseInt(request.getParameter("idpersona"));
+
+			p = cp.getById(id);
+
+			
+			
+			
+
+			// SimpleDateFormat f= new SimpleDateFormat("yyyy/MM/dd");//YYYY-MM-DD HH-MM-SS
+
+			Date fecha_desde = null;
+
+			Date fecha_hasta = null;
+
+			String fechaDesde = request.getParameter("fecha_desde");
+			String fechaHasta = request.getParameter("fecha_hasta");
+
+			System.out.println(fechaDesde);
+
+			try {
+
+				DateFormat f = new SimpleDateFormat("yyyy/MM/dd");
+
+				fecha_desde = f.parse(fechaDesde);
+				r.setFechaDesde(fecha_desde);
+
+				fecha_hasta = f.parse(fechaHasta);
+				r.setFechaHasta(fecha_hasta);
+
+				System.out.println(fecha_desde);
+
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+			}
+
+			System.out.println(fecha_desde);
+
+			r.setCaba(c);
+			r.setPer(p);
+			// double costo=c.getPrecioDia()*dias;
+
+			// System.out.println(costo);
+
+			int dias = (int) ((fecha_hasta.getTime() - fecha_desde.getTime()) / 86400000);
+			r.setCantidadDias(dias);
+			double costo = c.getPrecioDia() * dias;
+			r.setPrecioTotal(costo);
+
+			System.out.println(dias);
+			System.out.println(costo);
+			System.out.println(fecha_desde);
+			
+			
+				
+
+				
+
+					request.getSession().setAttribute("caba", c);
+					request.getSession().setAttribute("reservahecha", r);
+					request.getRequestDispatcher("ConfirmarModificarReserva.jsp").forward(request, response);
+				
+			
+		
+		
+		
 		
 		
 	}
 	
+		
+		
 	
+		
+		
+		if (request.getParameter("actualizareserva") != null) {
 
-}
+			
+	
+			entity.Reserva r = new entity.Reserva();
+			CtrlABMReserva ctp = new CtrlABMReserva();
+
+			r.setIdReserva(Integer.parseInt(request.getParameter("idreserva")));
+
+			
+			
+			
+			r.setCantidadDias(Integer.parseInt(request.getParameter("cantidaddias")));
+			r.setPrecioTotal(Double.parseDouble(request.getParameter("preciototal")));
+			
+			
+			
+			Date fecha_desde = null;
+
+			Date fecha_hasta = null;
+
+			String fechaDesde = request.getParameter("fecha_desde");
+			String fechaHasta = request.getParameter("fecha_hasta");
+
+			System.out.println(fechaDesde);
+
+			try {
+
+				DateFormat f = new SimpleDateFormat("yyyy/MM/dd");
+
+				fecha_desde = f.parse(fechaDesde);
+				r.setFechaDesde(fecha_desde);
+
+				fecha_hasta = f.parse(fechaHasta);
+				r.setFechaHasta(fecha_hasta);
+
+				System.out.println(fecha_desde);
+
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+			}
+			
+			
+			
+			
+
+			ctp.update(r);
+			this.doGet(request, response);
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+
+	}}

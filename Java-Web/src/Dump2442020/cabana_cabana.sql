@@ -16,34 +16,38 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `persona`
+-- Table structure for table `cabana`
 --
 
-DROP TABLE IF EXISTS `persona`;
+DROP TABLE IF EXISTS `cabana`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `persona` (
-  `IdPersona` int NOT NULL AUTO_INCREMENT,
-  `Dni` varchar(45) DEFAULT NULL,
-  `Apellido` varchar(45) DEFAULT NULL,
-  `Nombre` varchar(45) DEFAULT NULL,
-  `Email` varchar(45) DEFAULT NULL,
-  `Telefono` varchar(45) DEFAULT NULL,
-  `Usuario` varchar(45) DEFAULT NULL,
-  `Contrasena` varchar(45) DEFAULT NULL,
-  `Rol` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`IdPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `cabana` (
+  `IdCabana` int NOT NULL,
+  `PrecioDia` double DEFAULT NULL,
+  `Televisor` varchar(45) DEFAULT NULL,
+  `Calefaccion` varchar(45) DEFAULT NULL,
+  `WiFi` varchar(45) DEFAULT NULL,
+  `Cochera` varchar(45) DEFAULT NULL,
+  `Lavarropa` varchar(45) DEFAULT NULL,
+  `Heladera` varchar(45) DEFAULT NULL,
+  `Cocina` varchar(45) DEFAULT NULL,
+  `Asador` varchar(45) DEFAULT NULL,
+  `Capacidad` varchar(45) DEFAULT NULL,
+  `Lugar` varchar(45) DEFAULT NULL,
+  `Direccion` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`IdCabana`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `persona`
+-- Dumping data for table `cabana`
 --
 
-LOCK TABLES `persona` WRITE;
-/*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-INSERT INTO `persona` VALUES (6,'9999999999999','Topo','Perezoso','12344','122344','topo','tiopo','Administrador'),(36,'12345','caruso','catriel','@@@@','1234','cat','catri','Administrador'),(37,'122345677','Gaitan','Emanuel','@@@','12345','ema','nuel','Cliente'),(38,'123','Nico','Nico','@@@q','122344','nic','olas','Cliente'),(42,'3456','Caruso','Pehuel','@@@@@','1234','pepe','argento','Cliente'),(46,'fhhhhh','gfh','fhfh','ddgg','fffdd','checho','intelisano','cliente'),(48,'12333','Gimenez','Rokw','@@@@@','4562921','roke','celeste','cliente'),(49,'2334455666','Bertolero','Marianito','@@@@@@@@@','23456777','apu','black','cliente');
-/*!40000 ALTER TABLE `persona` ENABLE KEYS */;
+LOCK TABLES `cabana` WRITE;
+/*!40000 ALTER TABLE `cabana` DISABLE KEYS */;
+INSERT INTO `cabana` VALUES (1,6500,'si','si','si','si','si','si','si','si','5 personas','Chalten','Cerro Solo 69'),(2,5000,'si','si','si','no','no','si','si','no','4 personas','Calafate','Los Tehuelches 1232'),(3,5500,'si','si','si','si','si','si','si','no','3 personas','Ushuaia','Luis Fernando Martial 1430'),(4,5000,'si','si','si','si','si','si','si','si','6 personas','Bolson',' Subida Los Maitenes 1540'),(5,7000,'si','si','si','si','si','si','si','no','6 personas','Esquel','Los Cipreses 1200');
+/*!40000 ALTER TABLE `cabana` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

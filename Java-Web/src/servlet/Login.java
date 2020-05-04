@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import entity.Persona;
 import controlers.CtrlABMPersona;
+import controlers.CtrlABMReserva;
 
 
 
@@ -36,6 +38,29 @@ public class Login extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+	
+		ArrayList<entity.Reserva> res;
+
+		CtrlABMReserva ctrl = new CtrlABMReserva();
+		// CtrlABMPersona cp = new CtrlABMPersona();
+		entity.Persona per = (Persona) request.getSession().getAttribute("personaLogueada");
+		request.getSession().getAttribute("caba");
+		
+		
+		
+		
+	          res=ctrl.getAll();
+	          
+	          
+	            request.setAttribute("todasReservas", res);
+				request.getRequestDispatcher("HomeAdministrador.jsp").forward(request, response);
+	
+	
+	
+	
+	
+	
+	
 	}
 
 	/**
@@ -67,7 +92,7 @@ public class Login extends HttpServlet {
 					if (per.getRol().equals("Administrador")) {
 				    
 						
-						request.getRequestDispatcher("HomeAdministrador.jsp").forward(request, response);
+						this.doGet(request, response);
 					}else {
 						
 						request.getRequestDispatcher("Home.jsp").forward(request, response);
@@ -86,19 +111,7 @@ public class Login extends HttpServlet {
 				
 		}
 			
-			//System.out.println();
-			//request.getRequestDispatcher("PaginaError.jsp").forward(request, response);
-
 			
-			//request.getRequestDispatcher("menuPrincipal.jsp").forward(request, response);
-			//response.getWriter().append(user).append(" ").append(pass);
-			
-			
-		//} catch (Exception e) {
-			//e.printStackTrace();
-
-			
-		//}
 		if (request.getParameter("salir") != null) {
 			
 			request.getRequestDispatcher("Login.jsp").forward(request, response);

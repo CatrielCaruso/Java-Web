@@ -20,39 +20,40 @@
 	<%@include file="../PrincipalAdministrador.jsp"%>
 
 
-<form method="post" action="RegistrarPersona">
-	<div class="row">
+	<form method="post" action="RegistrarPersona">
+		<div class="row">
 
-		<div class="col-sm-6  buscador">
-			<div class="input-group mb-3">
-				<input  class="form-control"
-					placeholder="Ingrese apellido del cliente"
-					aria-label="Recipient's username" aria-describedby="basic-addon2" type="text" name="nombre">
-				<div class="input-group-append">
-				
-					<button type="submit" class="btn btn-success"  name="buscar" type="button">Buscar</button>
-				 
+			<div class="col-sm-6  buscador">
+				<div class="input-group mb-3">
+					<input class="form-control"
+						placeholder="Ingrese apellido del cliente"
+						aria-label="Recipient's username" aria-describedby="basic-addon2"
+						type="text" name="nombre">
+					<div class="input-group-append">
+
+						<button type="submit" class="btn btn-success" name="buscar"
+							type="button">Buscar</button>
+
+					</div>
+
+
+
 				</div>
-
-
-
 			</div>
-		</div>
-		
-</form>		
-		<div class="col-sm-6 ">
+	</form>
+	<div class="col-sm-6 ">
 		<form method="post" action="RegistrarPersona">
 			<input type="submit" name="crear" value="Crear nuevo usuario"
 				class="coli">
-        </form>
-		</div>
+		</form>
+	</div>
 
 
 
 	</div>
-	
-	
-	
+
+
+
 	<div class="animated fadeIn">
 
 
@@ -72,7 +73,8 @@
 							<th>Usuario</th>
 							<th>Contraseña</th>
 							<th>Rol</th>
-							<th>Acciones</th>
+							<th>Acción:</th>
+							<th>Acción:</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -90,15 +92,19 @@
 								<td>${p.getContrasena()}</td>
 								<td>${p.getRol()}</td>
 
-
+								<form method="post" action="GestionPersona">
 								<td>
-									<form method="post" action="GestionPersona">
-										<button class="btn btn-warning btn-lg"
-											value="${p.getIdPersona()}" name="modificar">Editar</button>
-										<button class="btn btn-danger btn-lg"
-											value="${p.getIdPersona()}" name="borrar">Delete</button>
-									</form>
+
+									<button class="btn btn-warning btn-lg"
+										value="${p.getIdPersona()}" name="modificar">Editar</button>
 								</td>
+								<td>
+									<button class="btn btn-danger btn-lg"
+										value="${p.getIdPersona()}" name="borrar">Delete</button>
+
+								</td>
+								</form>
+
 							</tr>
 						</c:forEach>
 

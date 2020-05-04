@@ -147,8 +147,8 @@ public class DataReserva {
 				r.setIdReserva(rs.getInt("IdReserva"));
 				r.setFechaDesde(rs.getDate("FechaDesde"));
 				r.setFechaHasta(rs.getDate("FechaHasta"));
-				c.setIdCabana(rs.getInt("r.IdCabana"));
-				p.setIdPersona(rs.getInt("r.IdPersona"));
+				c.setIdCabana(rs.getInt("IdCabana"));
+				p.setIdPersona(rs.getInt("IdPersona"));
 				// r.getCaba().setIdCabana(rs.getInt("IdCabana"));
 				// r.getPer().setIdPersona(rs.getInt("IdPersona"));
 				r.setCantidadDias(rs.getInt("CantidadDias"));
@@ -200,4 +200,99 @@ public class DataReserva {
 		}
 	}
 
+	
+	
+	
+	
+	
+	public ArrayList<Reserva> getAll(){
+		//DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		//java.util.Date date = new Date();
+		
+		Statement stmt=null;
+		ResultSet rs=null;
+		ArrayList<Reserva> reservas= new ArrayList<Reserva>();
+		try {
+			stmt = FactoryConexion.getInstancia()
+					.getConn().createStatement();
+			rs = stmt.executeQuery("select r.IdReserva,r.FechaDesde,r.FechaHasta,r.IdPersona,r.IdCabana,r.CantidadDias,r.PrecioTotal,c.Lugar,p.Nombre,p.Apellido from reserva r "
+					+ "inner join cabana c on r.IdCabana=c.IdCabana " + " inner join persona p on r.IdPersona=p.IdPersona");
+			if(rs!=null){
+				while(rs.next()){
+					Reserva r = new Reserva();
+					Cabana c = new Cabana();
+					Persona p = new Persona();
+					c.setLugar(rs.getString("c.Lugar"));
+					r.setIdReserva(rs.getInt("r.IdReserva"));
+					r.setFechaDesde(rs.getTimestamp("r.FechaDesde"));
+					r.setFechaHasta(rs.getTimestamp("r.FechaHasta"));
+
+					p.setIdPersona(rs.getInt("r.IdPersona"));
+					c.setIdCabana(rs.getInt("r.IdCabana"));
+
+					r.setCantidadDias(rs.getInt("r.CantidadDias"));
+					r.setPrecioTotal(rs.getDouble("r.PrecioTotal"));
+					p.setNombre(rs.getString("p.Nombre"));
+                    p.setApellido(rs.getString("p.Apellido"));
+					r.setPer(p);
+					r.setCaba(c);
+
+					reservas.add(r);
+				}
+			}
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		try {
+			if(rs!=null) rs.close();
+			if(stmt!=null) stmt.close();
+			FactoryConexion.getInstancia().releaseConn();
+		} catch (SQLException e) {	
+			e.printStackTrace();
+		}
+		return reservas;	
+	}
+	
+	
+	
+	
+	
+	public void actualizar(Reserva p) {
+		PreparedStatement stmt = null;
+		
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+		
+
+		try {
+			stmt = FactoryConexion.getInstancia().getConn().prepareStatement(
+					"UPDATE  reserva SET FechaDesde=?,FechaHasta=?,CantidadDias=?,PrecioTotal=? where IdReserva=? ",
+					PreparedStatement.RETURN_GENERATED_KEYS);
+
+			
+			stmt.setTimestamp(1, new java.sql.Timestamp(p.getFechaDesde().getTime()));
+			stmt.setTimestamp(2, new java.sql.Timestamp(p.getFechaHasta().getTime()));
+			
+			stmt.setInt(3, p.getCantidadDias());
+			stmt.setDouble(4, p.getPrecioTotal());
+		
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (stmt != null)
+					stmt.close();
+				FactoryConexion.getInstancia().releaseConn();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
 }
