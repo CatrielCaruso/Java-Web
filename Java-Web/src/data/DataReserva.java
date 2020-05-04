@@ -261,6 +261,7 @@ public class DataReserva {
 	public void actualizar(Reserva p) {
 		PreparedStatement stmt = null;
 		
+		
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		
 

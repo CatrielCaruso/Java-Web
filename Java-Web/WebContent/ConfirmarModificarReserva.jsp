@@ -35,7 +35,7 @@
 
 				<div class="card-body">
 
-					<form class="form-sign" action="Reserva" method="POST">
+					<form class="form-sign" action="Reservas" method="POST">
 
 						<div class="form-group">
 							<label>Id</label> <input type="text"

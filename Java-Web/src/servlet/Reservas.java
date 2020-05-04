@@ -392,14 +392,15 @@ public class Reservas extends HttpServlet {
 			
 			
 			
-			
+			System.out.println(fechaHasta);
 
 			ctp.update(r);
-			this.doGet(request, response);
+			
+			//this.doGet(request, response);
 
 			
 			
-			
+			request.getRequestDispatcher("HomeAdministrador.jsp").forward(request, response);
 			
 			
 			
