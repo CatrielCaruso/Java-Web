@@ -52,4 +52,12 @@ public class CtrlABMReserva {
 		return dr.Nombre(nombre);
 	}
 	
+	
+	public boolean Disponible(Reserva r) {
+		return dr.Disponible(r);
+	}
+	
+	
+	
+	
 }

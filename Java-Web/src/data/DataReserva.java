@@ -55,12 +55,13 @@ public class DataReserva {
 		boolean i = true;
 		try {
 			stmt = FactoryConexion.getInstancia().getConn().prepareStatement(
-					"select * from reserva r  where r.IdCabana=? AND r.FechaDesde >= ? AND r.FechaHasta <= ?");
+					"select * from reserva r  where r.IdCabana=? AND r.FechaDesde >= ? AND r.FechaHasta <= ? ");
 
 			stmt.setInt(1, r.getCaba().getIdCabana());
 			stmt.setString(2, dateFormat.format(r.getFechaDesde().getTime()));
 			stmt.setString(3, dateFormat.format(r.getFechaHasta().getTime()));
-
+			
+			
 			rs = stmt.executeQuery();
 			if (rs != null && rs.next()) {
 				i = false;
@@ -346,6 +347,45 @@ public ArrayList<Reserva> Nombre(String nombre) {
 }
 	
 	
+
+
+public boolean Disponible(Reserva r) {
+
+	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+	java.util.Date date = new Date();
+	
+	PreparedStatement stmt = null;
+	ResultSet rs = null;
+	boolean i = true;
+	try {
+		stmt = FactoryConexion.getInstancia().getConn().prepareStatement(
+				"select * from reserva r  where r.IdCabana=? AND r.FechaDesde >= ? AND r.FechaHasta <= ? and r.IdReserva != ?");
+
+		stmt.setInt(1, r.getCaba().getIdCabana());
+		stmt.setString(2, dateFormat.format(r.getFechaDesde().getTime()));
+		stmt.setString(3, dateFormat.format(r.getFechaHasta().getTime()));
+		stmt.setInt(4, r.getIdReserva());
+		
+		rs = stmt.executeQuery();
+		if (rs != null && rs.next()) {
+			i = false;
+		}
+	} catch (SQLException e) {
+
+		e.printStackTrace();
+	}
+	try {
+		if (rs != null)
+			rs.close();
+		if (stmt != null)
+			stmt.close();
+		FactoryConexion.getInstancia().releaseConn();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+	return (i);
+}
+
 	
 	
 	

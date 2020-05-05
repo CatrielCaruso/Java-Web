@@ -328,7 +328,7 @@ public class Reservas extends HttpServlet {
 			System.out.println(costo);
 			System.out.println(fecha_desde);
 			
-			if (rc.estaDisponible(r)) {
+			if (rc.Disponible(r)) {
 				
 
 				try {
