@@ -257,11 +257,11 @@ public class Reservas extends HttpServlet {
 
 			
 			entity.Reserva r = new entity.Reserva();
-			CtrlABMReserva cr = new CtrlABMReserva();
+			CtrlABMReserva rc = new CtrlABMReserva();
 
 			int idr = Integer.parseInt(request.getParameter("idreserva"));
 
-			r = cr.getById(idr);
+			r = rc.getById(idr);
 			
 			
 			
@@ -281,9 +281,6 @@ public class Reservas extends HttpServlet {
 			
 			
 			
-
-			// SimpleDateFormat f= new SimpleDateFormat("yyyy/MM/dd");//YYYY-MM-DD HH-MM-SS
-
 			Date fecha_desde = null;
 
 			Date fecha_hasta = null;
@@ -292,6 +289,11 @@ public class Reservas extends HttpServlet {
 			String fechaHasta = request.getParameter("fecha_hasta");
 
 			System.out.println(fechaDesde);
+			
+			
+			
+			
+			
 
 			try {
 
@@ -326,17 +328,22 @@ public class Reservas extends HttpServlet {
 			System.out.println(costo);
 			System.out.println(fecha_desde);
 			
-			
+			if (rc.estaDisponible(r)) {
 				
 
-				
+				try {
+					// System.out.println("reserva creada");
+					// rc.add(r);
 
-					request.getSession().setAttribute("caba", c);
+					//request.getSession().setAttribute("caba", c);
 					request.getSession().setAttribute("reservahecha", r);
 					request.getRequestDispatcher("ConfirmarModificarReserva.jsp").forward(request, response);
-				
-			
-		
+				} catch (Exception e2) {
+					System.out.println("Aca tira error");
+				}
+			} else {
+				request.getRequestDispatcher("ErrorAlreservarAdministrador.jsp").forward(request, response);
+			}
 		
 		
 		
@@ -352,55 +359,22 @@ public class Reservas extends HttpServlet {
 
 			
 	
-			entity.Reserva r = new entity.Reserva();
-			CtrlABMReserva ctp = new CtrlABMReserva();
+			Reserva r = new Reserva();
+			CtrlABMReserva resCtrl = new CtrlABMReserva();
 
-			r.setIdReserva(Integer.parseInt(request.getParameter("idreserva")));
+			r = (Reserva) request.getSession().getAttribute("reservahecha");
+
+			
+
+			
+
+			resCtrl.update(r);
+			
+			this.doGet(request, response);
 
 			
 			
 			
-			r.setCantidadDias(Integer.parseInt(request.getParameter("cantidaddias")));
-			r.setPrecioTotal(Double.parseDouble(request.getParameter("preciototal")));
-			
-			
-			
-			Date fecha_desde = null;
-
-			Date fecha_hasta = null;
-
-			String fechaDesde = request.getParameter("fecha_desde");
-			String fechaHasta = request.getParameter("fecha_hasta");
-
-			System.out.println(fechaDesde);
-
-			try {
-
-				DateFormat f = new SimpleDateFormat("yyyy/MM/dd");
-
-				fecha_desde = f.parse(fechaDesde);
-				r.setFechaDesde(fecha_desde);
-
-				fecha_hasta = f.parse(fechaHasta);
-				r.setFechaHasta(fecha_hasta);
-
-				System.out.println(fecha_desde);
-
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-			}
-			
-			
-			
-			System.out.println(fechaHasta);
-
-			ctp.update(r);
-			
-			//this.doGet(request, response);
-
-			
-			
-			request.getRequestDispatcher("HomeAdministrador.jsp").forward(request, response);
 			
 			
 			
@@ -410,9 +384,56 @@ public class Reservas extends HttpServlet {
 		}
 		
 		
+		if (request.getParameter("errorAdministrador") != null) {
+
+			Reserva r = new Reserva();
+
+			r = (Reserva) request.getSession().getAttribute("reservahecha");
+
+			request.getSession().setAttribute("reservahecha", r);
+
+			request.getRequestDispatcher("ModificarReserva.jsp").forward(request, response);
+
+		}
+		
+		
+		if (request.getParameter("vol") != null) {
+
+			this.doGet(request, response);
+
+		}
 		
 		
 		
+		 if (request.getParameter("buscar") != null) {
+	    	  
+	    	  ArrayList<entity.Reserva> res;
+	  		CtrlABMReserva ctp = new CtrlABMReserva();
+
+				
+				String nombre = request.getParameter("nombre");
+				System.out.println(nombre);
+				
+				res =  ctp.Nombre(nombre);
+				
+
+				 request.setAttribute("todasReservas", res);
+				 request.getRequestDispatcher("HomeAdministrador.jsp").forward(request, response);
+	    	  
+	    	  
+	      }
+		
+		 if (request.getParameter("volveratras") != null) {
+
+			    Reserva r = new Reserva();
+
+				r = (Reserva) request.getSession().getAttribute("reservahecha");
+
+				request.getSession().setAttribute("reservahecha", r);
+
+				request.getRequestDispatcher("ModificarReserva.jsp").forward(request, response);
+
+			}
 		
 		
 

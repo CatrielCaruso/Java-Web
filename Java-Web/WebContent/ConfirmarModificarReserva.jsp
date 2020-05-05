@@ -11,7 +11,8 @@
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
 	
-	<link rel="stylesheet"
+	<link href="style/css/ConfirmarModificarReserva.css" rel="stylesheet">
+<link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 	
 	
@@ -29,7 +30,7 @@
 	 
 	
 
-	<div class="container">
+	<div class="container center animated fadeInLeft">
 			<div class="col-sm-12 ">
 
 
@@ -38,18 +39,18 @@
 					<form class="form-sign" action="Reservas" method="POST">
 
 						<div class="form-group">
-							<label>Id</label> <input type="text"
+							<h3>Id</h3> <input type="text"
 								value="${reservahecha.getIdReserva()}" name="idreserva"
 								readonly="readonly" class="form-control">
 						</div>
 
 						<div class="form-group">
-							<label>Fecha desde:</label> <input type="text" value="${reservahecha.getFechaDesde()}"
+							<h3>Fecha desde:</h3> <input type="text" value="${reservahecha.getFechaDesde()}"
 								name="fecha_desde" class="form-control">
 						</div>
 
 						<div class="form-group">
-							<label>Fecha hasta</label> <input type="text"
+							<h3>Fecha hasta</h3> <input type="text"
 								value="${reservahecha.getFechaHasta()}" name="fecha_hasta"
 								class="form-control">
 						</div>
@@ -69,20 +70,21 @@
 						</div>
 					
 						<div class="form-group">
-							<label>Cantidad de dias</label> <input type="text"
+							<h3>Cantidad de dias</h3> <input type="text"
 								value="${reservahecha.getCantidadDias()}" name="cantidaddias"
 								class="form-control">
 						</div>
                         
                         
                         	<div class="form-group">
-							<label>Precio total</label> <input type="text"
+							<h3>Precio total</h3> <input type="text"
 								value="${reservahecha.getPrecioTotal()}" name="preciototal"
 								class="form-control">
 						</div>
 
 
-
+                           <input type="submit" name="volveratras" value="Volver"
+							class="btn btn-primary btn-lg">
 						 
 						<input type="submit" name="actualizareserva" value="Aceptar"
 							class="btn btn-success btn-lg">

@@ -7,15 +7,17 @@
 <meta charset="ISO-8859-1">
 <title>Home administrador</title>
 <link href="style/css/PersonaCrud.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
 
 	<%@include file="../PrincipalAdministrador.jsp"%>
 
-	<form method="post" action="RegistrarPersona">
-		<div class="row">
+	<form method="post" action="Reservas">
+		<div class="row animated fadeIn">
 
-			<div class="col-sm-6  buscador">
+			<div class="col-sm-6  buscador animated fadeIn">
 				<div class="input-group mb-3">
 					<input class="form-control"
 						placeholder="Ingrese apellido del cliente"
@@ -33,8 +35,8 @@
 				</div>
 			</div>
 	</form>
-	<div class="col-sm-6 ">
-		<form method="post" action="RegistrarPersona">
+	<div class="col-sm-6 animated fadeIn ">
+		<form method="post" action="">
 			<input type="submit" name="crear" value="Crear nueva reserva"
 				class="coli">
 		</form>
@@ -47,10 +49,10 @@
 
 
 
-	<div class="col-sm-12">
+	<div class="col-sm-12 animated fadeIn">
 
 
-		<table class="table table-hover">
+		<table class="table table-hover animated fadeIn">
 
 			<thead>
 				<tr>

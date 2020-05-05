@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controlers.CtrlABMPersona;
+import controlers.CtrlABMReserva;
 
 /**
  * Servlet implementation class DireccionNavbar
@@ -76,8 +77,17 @@ public class DireccionNavbar extends HttpServlet {
 		
 		
 		if (request.getParameter("crudreservas") != null) {
-			request.getRequestDispatcher("HomeAdministrador.jsp").forward(request, response);
-		
+			
+			ArrayList<entity.Reserva> res;
+
+			CtrlABMReserva ctrl = new CtrlABMReserva();
+			
+                    res=ctrl.getAll();
+	          
+	          
+	          request.setAttribute("todasReservas", res);
+				request.getRequestDispatcher("HomeAdministrador.jsp").forward(request, response);
+			
 		
 		}
 		

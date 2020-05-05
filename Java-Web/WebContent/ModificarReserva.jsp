@@ -9,13 +9,16 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
+	
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-
+<link href="style/css/ModificarReserva.css" rel="stylesheet">
 <title>Modificar reserva</title>
 </head>
 <body>
        
-       <div class="container center">
+       <div class="container center animated fadeInLeft">
        <div class="col-sm-8">
 
 
@@ -30,13 +33,13 @@
 
 
 
-						<div class="form-group">
-							<label>Fecha desde:</label> <input type="text" name="fecha_desde"
+						<div class="form-group col">
+							<h3>Fecha desde:</h3> <input type="text" name="fecha_desde"
 								class="form-control" placeholder="AAAA/MM/DD"  >
 						</div>
 
-						<div class="form-group">
-							<label>Fecha hasta:</label> <input type="text" name="fecha_hasta"
+						<div class="form-group col">
+							<h3>Fecha hasta:</h3> <input type="text" name="fecha_hasta"
 								class="form-control" placeholder="AAAA/MM/DD" >
 						</div>
 
@@ -49,11 +52,16 @@
                         <input type="hidden" name="idreserva" value="${reserva.getIdReserva()}">
 						<input type="hidden" name="idcabana" value="${reserva.getCaba().getIdCabana()}">
 							<input type="hidden" name="idpersona" value="${reserva.getPer().getIdPersona()}">
+						
+						
+						  <input type="submit" name="vol" value="Volver"
+							class="btn btn-primary btn-lg">
+						
 						<input type="submit" name="actualizar" value="RESERVAR"
 							class="btn btn-success btn-lg">
 
 
-
+                          
 
 					</form>
 					

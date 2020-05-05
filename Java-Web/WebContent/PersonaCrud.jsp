@@ -21,9 +21,9 @@
 
 
 	<form method="post" action="RegistrarPersona">
-		<div class="row">
+		<div class="row animated fadeIn">
 
-			<div class="col-sm-6  buscador">
+			<div class="col-sm-6  buscador animated fadeIn">
 				<div class="input-group mb-3">
 					<input class="form-control"
 						placeholder="Ingrese apellido del cliente"
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 	</form>
-	<div class="col-sm-6 ">
+	<div class="col-sm-6 animated fadeIn  ">
 		<form method="post" action="RegistrarPersona">
 			<input type="submit" name="crear" value="Crear nuevo usuario"
 				class="coli">
