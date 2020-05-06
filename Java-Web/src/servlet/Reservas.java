@@ -123,7 +123,7 @@ public class Reservas extends HttpServlet {
 
 			try {
 
-				DateFormat f = new SimpleDateFormat("yyyy/MM/dd");
+				DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
 
 				fecha_desde = f.parse(fechaDesde);
 				r.setFechaDesde(fecha_desde);
@@ -273,7 +273,7 @@ public class Reservas extends HttpServlet {
 
 			try {
 
-				DateFormat f = new SimpleDateFormat("yyyy/MM/dd");
+				DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
 
 				fecha_desde = f.parse(fechaDesde);
 				r.setFechaDesde(fecha_desde);
@@ -473,7 +473,7 @@ public class Reservas extends HttpServlet {
 
 			try {
 
-				DateFormat f = new SimpleDateFormat("yyyy/MM/dd");
+				DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
 
 				fecha_desde = f.parse(fechaDesde);
 				r.setFechaDesde(fecha_desde);

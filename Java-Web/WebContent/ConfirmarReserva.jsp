@@ -10,11 +10,11 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-	
-	<link rel="stylesheet"
+
+<link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-	
-	<link href="style/css/ConfirmarReserva.css" rel="stylesheet">
+
+<link href="style/css/ConfirmarReserva.css" rel="stylesheet">
 
 
 
@@ -24,43 +24,49 @@
 
 
 
-	
 
-	 
-	
+
+
+
 
 	<div class="container center contenedor">
 
-	
-			<div class="col-sm-12   cont ">
+
+		<div class="col-sm-12   cont ">
 
 
-				<div class="row animated fadeInDown">Fecha desde: ${reservahecha.getFechaDesde()}</div>
-				<div class="row animated fadeInLeft">Fecha hasta: ${reservahecha.getFechaHasta()}</div>
-				<div class="row animated fadeInRight">Cantidad de dias: ${reservahecha.getCantidadDias()}</div>
-				<div class="row animated fadeInLeft">Capacidad: ${caba.getCapacidad()}</div>
-				<div class="row animated fadeInRight">Precio total de alquiler: ${reservahecha.getPrecioTotal()} pesos Argentinos</div>
-				<div class="row animated fadeInLeft">Lugar: ${caba.getLugar()}  </div>
-				<div class="row  animated fadeInUp">Dirección: ${caba.getDireccion()}</div>
-				
-				
-			<form  action="Reservas" method="POST">	
-			
-			
-				<input type="submit" name="confirmar" value="CONFIRMAR"
-							class="btn btn-success btn-lg">
-			
-               <input type="submit" name="volver" value="Volver"
-							class="btn btn-info btn-lg">
-            </form>
+			<div class="row animated fadeInDown">Fecha desde:
+				${reservahecha.getFechaDesde()}</div>
+			<div class="row animated fadeInLeft">Fecha hasta:
+				${reservahecha.getFechaHasta()}</div>
+			<div class="row animated fadeInRight">Cantidad de dias:
+				${reservahecha.getCantidadDias()}</div>
+			<div class="row animated fadeInLeft">Capacidad:
+				${caba.getCapacidad()}</div>
+			<div class="row animated fadeInRight">Precio total de alquiler:
+				${reservahecha.getPrecioTotal()} pesos Argentinos</div>
+			<div class="row animated fadeInLeft">Lugar: ${caba.getLugar()}
 			</div>
+			<div class="row  animated fadeInUp">Dirección:
+				${caba.getDireccion()}</div>
 
+
+			<form action="Reservas" method="POST">
+
+				<input type="submit" name="volver" value="Volver"
+					class="btn btn-info btn-lg"> <input type="submit"
+					name="confirmar" value="CONFIRMAR" class="btn btn-success btn-lg">
+
+
+			</form>
 		</div>
-	
+
+	</div>
 
 
 
-  <%@include file="../Footer.jsp"%>
+
+	<%@include file="../Footer.jsp"%>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

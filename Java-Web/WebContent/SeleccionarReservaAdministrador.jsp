@@ -38,16 +38,16 @@
 
 
 
-				<div class="form-group">
+				<div class="form-group coli" >
 
-					<h3 class=" col-sm-2 control-label">Nombre:${persona.getNombre()}</h3>
+					<h3 class=" col-sm-4 control-label">Nombre: ${persona.getNombre()}</h3>
 				</div>
 				<div class="form-group">
-					<h3 class=" col-sm-2 control-label">Apellido:${persona.getApellido()}</h3>
+					<h3 class=" col-sm-4 control-label">Apellido: ${persona.getApellido()}</h3>
 				</div>
 
 				<div class="form-group">
-					<h3 class=" col-sm-4 control-label">Seleccionar destino</h3>
+					<h3 class=" col-sm-4 control-label">Seleccionar destino:</h3>
 
 
 					<div class="col-sm-6 cont1">
@@ -71,13 +71,13 @@
 				<div class="form-group col">
 					<h3>Fecha desde:</h3>
 					<input type="text" name="fecha_desde" class="form-control"
-						placeholder="AAAA/MM/DD">
+						placeholder="DD/MM/AAAA">
 				</div>
 
 				<div class="form-group col">
 					<h3>Fecha hasta:</h3>
 					<input type="text" name="fecha_hasta" class="form-control"
-						placeholder="AAAA/MM/DD">
+						placeholder="DD/MM/AAAA">
 				</div>
 
 
