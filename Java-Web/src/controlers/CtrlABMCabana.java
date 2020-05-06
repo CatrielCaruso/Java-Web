@@ -1,19 +1,29 @@
 package controlers;
 
+import java.util.ArrayList;
+
 import data.DataCabana;
 
 import entity.Cabana;
+import entity.Reserva;
 
 
 public class CtrlABMCabana {
 	
-	private DataCabana dataPer = new DataCabana();
+	private DataCabana dataCaba = new DataCabana();
 	
 	public CtrlABMCabana() {
-		dataPer = new DataCabana();
+		dataCaba = new DataCabana();
 	}
 	
 	public Cabana getById(int id) {
-		return dataPer.getById(id);
+		return dataCaba.getById(id);
 	}
+	
+	
+	
+	public ArrayList<Cabana> getAll(){
+		return dataCaba.getAll();}
+	
+	
 }

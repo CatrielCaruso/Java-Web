@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Mis reservas</title>
 
 <link href="style/css/MisReservas.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css"
@@ -45,6 +45,7 @@
 					<th>Precio total:</th>
 					<th>Lugar:</th>
 					<th>Nombre:</th>
+					<th>Acción:</th>
 
 				</tr>
 			</thead>

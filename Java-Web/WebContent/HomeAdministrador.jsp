@@ -36,8 +36,8 @@
 			</div>
 	</form>
 	<div class="col-sm-6 animated fadeIn ">
-		<form method="post" action="">
-			<input type="submit" name="crear" value="Crear nueva reserva"
+		<form method="post" action="Reservas">
+			<input type="submit" name="nuevaReserva" value="Crear nueva reserva"
 				class="coli">
 		</form>
 	</div>

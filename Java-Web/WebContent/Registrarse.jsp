@@ -10,56 +10,57 @@
 	crossorigin="anonymous">
  <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-<title>Insert title here</title>
+	<link href="style/css/Registrarse.css" rel="stylesheet">
+<title>Registrarse</title>
 </head>
 <body>
-	<div class="container mt-2 col-lg-6 animated zoomIn">
+	<div class="container animated fadeInLeft">
 
-		<div class="card col-sm-10">
+		<div class="col-sm-12">
 
-			<div class="card-body ">
+			
 
 				<form class="form-horizontal"  action="RegistrarPersona" method="POST">
 
 					<div class="form-group text-center">
-						<h3>Nuevo usuario</h3>
+						<h1>Nuevo usuario</h1>
 					</div>
 					
 					<div class="form-group">
-						<label>Apellido:</label> <input type="text" name="apellido"
+						<h5>Apellido:</h5> <input type="text" name="apellido"
 							class="form-control" required>
 					</div>
 					
 
 
 					<div class="form-group">
-						<label>Nombre:</label> <input type="text" name="nombre"
+						<h5>Nombre:</h5> <input type="text" name="nombre"
 							class="form-control" required>
 					</div>
 
 
 					<div class="form-group">
-						<label>Dni:</label> <input type="text" name="dni"
+						<h5>Dni:</h5> <input type="text" name="dni"
 							class="form-control" required>
 					</div>
 
 					<div class="form-group">
-						<label>Telefono:</label> <input type="text" name="telefono"
+						<h5>Telefono:</h5> <input type="text" name="telefono"
 							class="form-control" required>
 					</div>
 
 					<div class="form-group">
-						<label>Email:</label> <input type="text" name="email"
+						<h5>Email:</h5> <input type="text" name="email"
 							class="form-control" required>
 					</div>
 
 					<div class="form-group">
-						<label>Usuario:</label> <input type="text" name="usuario"
+						<h5>Usuario:</h5> <input type="text" name="usuario"
 							class="form-control" required>
 					</div>
 
 					<div class="form-group">
-						<label>Contraseña:</label> <input type="password"
+						<h5>Contraseña:</h5> <input type="password"
 							name="contrasena" class="form-control" required>
 					</div>
 					
@@ -76,7 +77,7 @@
 
 
 
-			</div>
+			
 
 
 

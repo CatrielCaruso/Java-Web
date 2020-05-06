@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Confirmar modificación de la reserva</title>
+<title>Confirmar reserva administrador</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -38,12 +38,7 @@
 
 					<form class="form-sign" action="Reservas" method="POST">
 
-						<div class="form-group">
-							<h3>Id</h3> <input type="text"
-								value="${reservahecha.getIdReserva()}" name="idreserva"
-								readonly="readonly" class="form-control">
-						</div>
-
+						
 						<div class="form-group">
 							<h3>Fecha desde:</h3> <input type="text" value="${reservahecha.getFechaDesde()}"
 								name="fecha_desde" class="form-control">
@@ -83,10 +78,10 @@
 						</div>
 
 
-                           <input type="submit" name="volveratras" value="Volver"
+                           <input type="submit" name="ErrorAdministrador" value="Volver al menu principal"
 							class="btn btn-primary btn-lg">
 						 
-						<input type="submit" name="actualizareserva" value="Aceptar"
+						<input type="submit" name="reservaAdmin" value="Aceptar"
 							class="btn btn-success btn-lg">
 
 

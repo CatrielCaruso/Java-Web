@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Reservar</title>
 
 <link href="style/css/MisReservas.css" rel="stylesheet">
 
@@ -71,12 +71,12 @@
 
 
 						<div class="form-group">
-							<label>Fecha desde:</label> <input type="text" name="fecha_desde"
+							<h3>FECHA DESDE:</h3> <input type="text" name="fecha_desde"
 								class="form-control" placeholder="AAAA/MM/DD">
 						</div>
 
 						<div class="form-group">
-							<label>Fecha hasta:</label> <input type="text" name="fecha_hasta"
+							<h3>FECHA HASTA:</h3> <input type="text" name="fecha_hasta"
 								class="form-control" placeholder="AAAA/MM/DD">
 						</div>
 

@@ -2,8 +2,7 @@ package data;
 import java.sql.*;
 
 import entity.*;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+
 import java.util.ArrayList;
 
 
@@ -53,4 +52,62 @@ public class DataCabana {
 		return p;
 	}
 
+	
+	
+	
+	public ArrayList<Cabana> getAll() {
+
+		Statement stmt = null;
+		ResultSet rs = null;
+		ArrayList<Cabana> cab = new ArrayList<Cabana>();
+		try {
+			stmt = FactoryConexion.getInstancia().getConn().createStatement();
+			rs = stmt.executeQuery("select * from cabana");
+			if (rs != null) {
+				while (rs.next()) {
+					Cabana c = new Cabana();
+					c.setIdCabana(rs.getInt("IdCabana"));
+					c.setPrecioDia(rs.getDouble("PrecioDia"));
+					c.setTelevisor(rs.getString("Televisor"));
+					c.setCalefaccion(rs.getString("Calefaccion"));
+					c.setWiFi(rs.getString("WiFi"));
+					c.setCochera(rs.getString("Cochera"));
+					c.setLavarropa(rs.getString("Lavarropa"));
+					c.setHeladera(rs.getString("Heladera"));
+					c.setCocina(rs.getString("Cocina"));
+					c.setAsador(rs.getString("Asador"));
+					c.setCapacidad(rs.getString("Capacidad"));
+					c.setLugar(rs.getString("Lugar"));
+					c.setDireccion(rs.getString("Direccion"));
+					cab.add(c);
+				}
+			}
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+		try {
+			if (rs != null)
+				rs.close();
+			if (stmt != null)
+				stmt.close();
+			FactoryConexion.getInstancia().releaseConn();
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+		return cab;
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

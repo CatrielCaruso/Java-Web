@@ -1,0 +1,34 @@
+@charset "ISO-8859-1";
+
+.container{
+	
+	
+	
+	
+
+	
+	margin-top:25px;
+	
+	border: 1px black solid;
+	
+	border-radius: 10px;
+	box-shadow: 6px 6px 6px black;
+	
+	height:600px;
+	background:#cfcfcf;
+}
+
+.h3{
+	
+	font-family: 'Roboto', sans-serif;
+}
+
+.cont1{
+	
+	margin-top:15px;
+}
+
+.cont2{
+	
+	margin-top:30px;
+}
