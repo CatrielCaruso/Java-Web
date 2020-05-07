@@ -47,7 +47,7 @@ public class DataReserva {
 
 	public boolean estaDisponible(Reserva r) {
 
-		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		java.util.Date date = new Date();
 		
 		PreparedStatement stmt = null;
@@ -263,7 +263,7 @@ public class DataReserva {
 		PreparedStatement stmt = null;
 		
 		
-		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		
 
 		try {
@@ -351,7 +351,7 @@ public ArrayList<Reserva> Nombre(String nombre) {
 
 public boolean Disponible(Reserva r) {
 
-	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 	java.util.Date date = new Date();
 	
 	PreparedStatement stmt = null;
