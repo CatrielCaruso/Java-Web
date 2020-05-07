@@ -33,7 +33,7 @@ CREATE TABLE `persona` (
   `Contrasena` varchar(45) DEFAULT NULL,
   `Rol` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`IdPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `persona` (
 
 LOCK TABLES `persona` WRITE;
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-INSERT INTO `persona` VALUES (6,'9999999999999','Topo','Perezoso','12344','122344','topo','tiopo','Administrador'),(36,'12345','caruso','catriel','@@@@','1234','cat','catri','Administrador'),(37,'122345677','Gaitan','Emanuel','@@@','12345','ema','nuel','Cliente'),(38,'123','Nico','Nico','@@@q','122344','nic','olas','Cliente'),(42,'3456','Caruso','Pehuel','@@@@@','1234','pepe','argento','Cliente'),(46,'fhhhhh','gfh','fhfh','ddgg','fffdd','checho','intelisano','cliente'),(48,'12333','Gimenez','Rokw','@@@@@','4562921','roke','celeste','cliente'),(49,'2334455666','Bertolero','Marianito','@@@@@@@@@','23456777','apu','black','cliente');
+INSERT INTO `persona` VALUES (6,'9999999999999','Topo','Perezoso','12344','122344','topo','tiopo','Administrador'),(36,'12345','caruso','catriel','@@@@','1234','cat','catri','Administrador'),(37,'122345677','Gaitan','Emanuel','@@@','12345','ema','nuel','Cliente'),(38,'123','Nico','Nico','@@@q','122344','nic','olas','Cliente'),(42,'3456','Caruso','Pehuel','@@@@@','1234','pepe','argento','Cliente'),(48,'12333','Gimenez','Roke','@@@@@','4562921','roke','celeste','cliente'),(49,'2334455666','Bertolero','Marianito','@@@@@@@@@','23456777','apu','black','cliente'),(51,'12345678','Perezoso','Topo','@@@@@@@@@@','4444444444','topo','lancha','cliente'),(52,'098765','Intelisano','Sergio','@@@@@@','8765432','checho','cerveza','cliente');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-04 12:53:03
+-- Dump completed on 2020-05-07 10:26:48

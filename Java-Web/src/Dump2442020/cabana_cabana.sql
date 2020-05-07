@@ -46,7 +46,7 @@ CREATE TABLE `cabana` (
 
 LOCK TABLES `cabana` WRITE;
 /*!40000 ALTER TABLE `cabana` DISABLE KEYS */;
-INSERT INTO `cabana` VALUES (1,6500,'si','si','si','si','si','si','si','si','5 personas','Chalten','Cerro Solo 69'),(2,5000,'si','si','si','no','no','si','si','no','4 personas','Calafate','Los Tehuelches 1232'),(3,5500,'si','si','si','si','si','si','si','no','3 personas','Ushuaia','Luis Fernando Martial 1430'),(4,5000,'si','si','si','si','si','si','si','si','6 personas','Bolson',' Subida Los Maitenes 1540'),(5,7000,'si','si','si','si','si','si','si','no','6 personas','Esquel','Los Cipreses 1200');
+INSERT INTO `cabana` VALUES (1,6500,'si','si','si','si','si','si','si','si','5 personas','Chalten','Cerro Solo 69'),(2,5000,'si','si','si','no','no','si','si','no','4 personas','Calafate','Los Tehuelches 1232'),(3,5500,'si','si','si','si','si','si','si','no','3 personas','Ushuaia','Luis Fernando Martial 1430'),(4,5000,'si','si','si','si','si','si','si','si','6 personas','Bolson',' Subida Los Maitenes 1540'),(5,7000,'si','si','si','si','si','si','si','no','6 personas','Esquel','Los Cipreses 1200'),(6,6000,'si','si','si','no','si','si','si','no','5 personas','Bariloche','Zorzales 76');
 /*!40000 ALTER TABLE `cabana` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-04 12:53:03
+-- Dump completed on 2020-05-07 10:26:48

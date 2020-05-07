@@ -21,7 +21,7 @@ public class CtrlABMReserva {
 
 	public void add(Reserva r) {
 		dr.add(r);
-		;
+		
 	}
 
 	public ArrayList<Reserva> reservasDePer(Persona logged) {
