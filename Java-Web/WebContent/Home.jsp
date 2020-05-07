@@ -399,6 +399,87 @@
 
 
 
+	<div class=" borde container center wow animated fadeInRight">
+
+		<div class="row">
+
+			<div class=" color1 col-sm-12 ">Bariloche</div>
+		</div>
+
+		<div class="row">
+			<div class=" color2 col-sm-4">Cabañas del bosque Bariloche
+				situado en San Carlos de Bariloche ofrece alojamiento con wifi
+				gratis, jardín ,calefacción, aire acondicionado, lavarropas,
+				televisor. Tiene 3 habitaciones. Dos habitaciones están compuesta
+				con camas matrimonial cada una y la tercera se compone de dos camas
+				individuales. Pensado para albergar a 6 personas. Alquile esta
+				cabaña por 6000 pesos aragentinos por día.</div>
+			<div class="color2 col-sm-8">
+				<div id="carouselExampleIndicators6" class="carousel slide"
+					data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleIndicators" data-slide-to=""
+							class="active"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to=""></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to=""></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="style/img/bariloche1.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/bariloche2.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/bariloche3.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/bariloche4.jpg" class="d-block w-100" alt="">
+						</div>
+						<div class="carousel-item">
+							<img src="style/img/bariloche5.jpg" class="d-block w-100" alt="">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators6"
+						role="button" data-slide="prev"> <span
+						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+						class="sr-only">Previous</span>
+					</a> <a class="carousel-control-next"
+						href="#carouselExampleIndicators6" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class=" color3 col-sm-12">
+				<form method="post" action="Reservas">
+
+					<input type="hidden" name="idcabana" value="6">
+					<button class="btn btn-success btn-lg" value="" name="alquilar">Reservar</button>
+					<button class="btn btn-info btn-lg" value="" name="contacto">Contacto</button>
+
+				</form>
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
 
 	<%@include file="../Footer.jsp"%>
 

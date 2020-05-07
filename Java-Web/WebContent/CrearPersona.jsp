@@ -5,15 +5,18 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Crear persona</title>
+<link href="style/css/CrearPersona.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
 <%@include file="../PrincipalAdministrador.jsp"%>
 
-<div class="container mt-2 col-lg-6 animated zoomIn">
+<div class="container mt-2 col-lg-6 animated fadeInLeft">
 
-		<div class="card col-sm-12">
+		<div class="col-sm-12">
 
-			<div class="card-body ">
+			
 
 				<form class="form-horizontal"  action="RegistrarPersona" method="POST">
 
@@ -82,7 +85,7 @@
 
 		</div>
 
-	</div>
+	
 
 
 <%@include file="../Footer.jsp"%>

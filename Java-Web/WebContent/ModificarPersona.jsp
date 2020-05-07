@@ -5,12 +5,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Modificar persona</title>
+<link href="style/css/ModificarPersona.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
 
 <%@include file="../PrincipalAdministrador.jsp"%>
 
-<div class="container">
+<div class="container col-lg-6 animated fadeInLeft">
 			<div class="col-sm-12 ">
 
 

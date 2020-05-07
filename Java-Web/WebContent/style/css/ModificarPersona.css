@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+.container{
+	
+	
+	
+	
+
+	font-family: 'Roboto', sans-serif;
+	margin-top:25px;
+	
+	border: 1px black solid;
+	
+	border-radius: 10px;
+	box-shadow: 6px 6px 6px black;
+	
+	height:850px;
+	background:#cfcfcf;
+}
+.label{
+	
+	font-family: 'Roboto', sans-serif;
+}
