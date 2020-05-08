@@ -112,18 +112,23 @@ public class Reservas extends HttpServlet {
 
 			// SimpleDateFormat f= new SimpleDateFormat("yyyy/MM/dd");//YYYY-MM-DD HH-MM-SS
 
+			
+			SimpleDateFormat f = new SimpleDateFormat("MM/dd/yyyy");
+			
 			Date fecha_desde = null;
 
 			Date fecha_hasta = null;
 
 			String fechaDesde = request.getParameter("fecha_desde");
 			String fechaHasta = request.getParameter("fecha_hasta");
+			
+			System.out.println("fecha_desde");
 
 			System.out.println(fechaDesde);
 
 			try {
 
-				DateFormat f = new SimpleDateFormat("yyyy/MM/dd");
+				//DateFormat f = new SimpleDateFormat("MM/dd/yyyy HH:mm");
 
 				fecha_desde = f.parse(fechaDesde);
 				r.setFechaDesde(fecha_desde);
