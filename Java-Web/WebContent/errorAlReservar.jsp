@@ -23,7 +23,7 @@
 
 	<form action="Reservas" method="POST">
 		<button type="submit" class="coli animated fadeInUp" value=""
-			name="error">Volver</button>
+			name="error">Volver al home</button>
 	</form>
 
 

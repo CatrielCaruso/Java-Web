@@ -113,7 +113,7 @@ public class Reservas extends HttpServlet {
 			// SimpleDateFormat f= new SimpleDateFormat("yyyy/MM/dd");//YYYY-MM-DD HH-MM-SS
 
 			
-			SimpleDateFormat f = new SimpleDateFormat("MM/dd/yyyy");
+			//SimpleDateFormat f = new SimpleDateFormat("yyyy/mm/dd");
 			
 			Date fecha_desde = null;
 
@@ -128,7 +128,7 @@ public class Reservas extends HttpServlet {
 
 			try {
 
-				//DateFormat f = new SimpleDateFormat("MM/dd/yyyy HH:mm");
+				DateFormat f = new SimpleDateFormat("yyyy/MM/dd");
 
 				fecha_desde = f.parse(fechaDesde);
 				r.setFechaDesde(fecha_desde);
@@ -223,13 +223,8 @@ public class Reservas extends HttpServlet {
 
 		if (request.getParameter("error") != null) {
 
-			Reserva r = new Reserva();
+			request.getRequestDispatcher("Home.jsp").forward(request, response);
 
-			r = (Reserva) request.getSession().getAttribute("reservahecha");
-
-			request.getSession().setAttribute("reservahecha", r);
-
-			request.getRequestDispatcher("Reservas.jsp").forward(request, response);
 
 		}
 

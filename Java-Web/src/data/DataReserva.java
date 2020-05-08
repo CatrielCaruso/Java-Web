@@ -47,7 +47,7 @@ public class DataReserva {
 
 	public boolean estaDisponible(Reserva r) {
 
-		DateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		java.util.Date date = new Date();
 		
 		PreparedStatement stmt = null;
