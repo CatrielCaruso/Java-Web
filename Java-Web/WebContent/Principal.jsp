@@ -66,7 +66,7 @@
 			<button style="border: none"
 				class="btn btn-outline-light dropdown-toggle" type="button"
 				id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-				aria-expanded="false">Session: ${personaLogueada.getNombre()}
+				aria-expanded="false">Sesión: ${personaLogueada.getNombre()}
 				${personaLogueada.getApellido()}</button>
 			<div class="dropdown-menu text-center"
 				aria-labelledby="dropdownMenuButton">
