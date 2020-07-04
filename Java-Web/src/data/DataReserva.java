@@ -55,7 +55,7 @@ public class DataReserva {
 		boolean i = true;
 		try {
 			stmt = FactoryConexion.getInstancia().getConn().prepareStatement(
-					"select * from reserva r  where r.IdCabana=? AND r.FechaDesde >= ? AND r.FechaHasta <= ?"
+					"select * from reserva r  where r.IdCabana=? AND (? between r.fechaDesde and r.fechaHasta or ? between r.fechaDesde and r.fechaHasta)"
 					);
 
 			stmt.setInt(1, r.getCaba().getIdCabana());
@@ -363,7 +363,7 @@ public boolean Disponible(Reserva r) {
 	boolean i = true;
 	try {
 		stmt = FactoryConexion.getInstancia().getConn().prepareStatement(
-				"select * from reserva r  where r.IdCabana=? AND r.FechaDesde >= ? AND r.FechaHasta <= ? and r.IdReserva != ?");
+				"select * from reserva r  where r.IdCabana=? AND (? between r.fechaDesde and r.fechaHasta or ? between r.fechaDesde and r.fechaHasta) and r.IdReserva != ?");
 
 		stmt.setInt(1, r.getCaba().getIdCabana());
 		stmt.setString(2, dateFormat.format(r.getFechaDesde().getTime()));
